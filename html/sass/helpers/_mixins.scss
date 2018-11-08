@@ -1,0 +1,62 @@
+/*----------  mixins
+------------------------------------------------------------------------------*/
+
+//responsive sprite
+// if you don't need retina display icons, exclude @media part of code
+
+@mixin sprite($sprite) {
+	background-image: sprite-url($icons);
+	background-position: sprite-position($icons, $sprite);
+	background-repeat: no-repeat;
+	height: image-height(sprite-file($icons, $sprite));
+	width: image-width(sprite-file($icons, $sprite));
+}
+
+@mixin days-hover {
+    -webkit-transition: background-color 0.2s linear 0s, border 0.2s linear 0s;
+	-moz-transition: background-color 0.2s linear 0s, border 0.2s linear 0s;
+	-o-transitionn: background-color 0.2s linear 0s, border 0.2s linear 0s;
+}
+
+// IE gradient 
+@mixin filter-gradient($start-color, $end-color, $orientation: vertical) {
+	@include has-layout;
+	$gradient-type: if($orientation == vertical, 0, 1);
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=#{$gradient-type}, startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}'); }
+}
+
+@mixin responsive($device) {
+	
+	@if $device == smartphone {
+		@media only screen and (min-width : 320px) and (max-width : 767px) { @content; }
+	}
+
+	@if $device == tablet {
+		@media only screen and (min-width : 768px) and (max-width : 1024px) { @content; }
+	}
+
+	@if $device == desktop {
+		@media only screen and (min-width : 1224px) { @content; }
+	}
+
+	@if $device == retina {
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+			@content;
+		}
+	}
+}
+
+@mixin input-placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}

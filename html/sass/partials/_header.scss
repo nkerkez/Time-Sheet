@@ -1,0 +1,194 @@
+/*----------  header
+------------------------------------------------------------------------------*/
+
+header {
+	height: 114px;
+	.wrapper {
+		margin-bottom: 10px;
+		position: relative;
+		overflow: visible;
+	}
+	.top-bar {
+		height: 5px;
+		background: $orange-dark;
+		width: 100%;
+		overflow: hidden;
+		border-bottom: 1px solid $white;
+		margin-bottom: 20px;
+	}
+	.user {
+		margin-top: 2px;
+		li {
+			float: left;
+			margin-right: 10px;
+			padding-right: 10px;
+			border-right: 1px dotted $grey-dark;
+			position: relative;
+			&.last {
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			a {
+				color: $grey-dark;
+				&:hover {color: $orange-dark;}
+			}
+			.invisible {
+				height: 25px;
+				width: 100%;
+				position: absolute;
+				top: 15px;
+				left: 0;
+				display: none;
+			}
+			.user-menu {
+				position: absolute;
+				top: 34px;
+				right: -50px;
+				width: 150px;
+				padding: 10px;
+				background: $white;
+				z-index: 9999;
+				@include border-radius (5px);
+				border: 1px solid $grey-light;
+				display: none;
+				ul {
+					li {
+						display: block;
+						border: none;
+						padding: 0;
+						margin: 0 0 5px 0;
+						float: none;
+						border-bottom: 1px dotted $grey-light;
+						padding-bottom: 5px;
+						a {
+							display: block;
+							&:hover {
+								color: $grey-darker !important;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+				&:before {
+					content: "";
+					@include sprite('user-menu-arrow');
+					display: block;
+					position: absolute;
+					top: -16px;
+					left: 70px;
+				}
+			}
+		}
+	}
+	nav {
+		width: 100%;
+		clear: both;
+		position: relative;
+		left: 0;
+		top: 0;
+		.line {
+			border-bottom: 8px solid $gray-middle;
+			width: 100%;
+			display: block;
+			margin-top: 10px;
+			@include border-radius (5px 0 0 0);
+			@include responsive(smartphone) {
+				width: 95%;
+				margin: 10px auto 0 auto;
+			}
+		}
+		.menu {
+			float: right;
+			margin-top: -39px;
+			li {
+				float: left;
+				margin-right: -1px;
+				&.last {
+					margin-right: 0;
+				}
+			}
+		}
+		.mobile-menu {
+			width: 100%;
+			.menu-btn {
+				width: 38px;
+				border: 1px solid #e8e8e8;
+				border-bottom-color: #bcbcbc;
+				@include background(linear-gradient(#fefefe, #eeeeed));
+   		 		@include filter-gradient(#fefefe, #eeeeed);
+				height: 30px;
+				display: none;
+				@include border-radius (5px);
+				position: relative;
+				float: right;
+				margin: -45px 10px 0 0;
+				span {
+					@include sprite('menu');
+					display: block;
+					text-indent: -9999px;
+					position: absolute;
+					top: 8px;
+					left: 11px;
+				}
+			}
+			ul {
+				display: none;
+				width: 100%;
+				margin-top: 10px;
+				li {
+					height: 28px;
+					line-height: 28px;
+					background: $white;
+					border-bottom: 1px dotted $grey-dark;
+					padding-left: 25px;
+					&:last-child {
+						border: none;
+					}
+					a {
+						color: $black;
+						display: block;
+						&:hover {
+							color: $grey-dark;
+						}
+					}
+				}
+			}
+		}
+		@include responsive(smartphone) {
+			.menu {
+				display: none;
+			}
+			.mobile-menu {
+				.menu-btn {
+					display: block;
+				}
+			}
+		}
+	}
+}
+@include responsive(smartphone) {
+	header {
+		height: auto;
+		.wrapper {
+			margin-bottom: 0;
+			width: 100%;
+		}
+		.logo {
+			margin-left: 12px;
+		}
+		.user {
+			margin: -8px 12px 0 0;
+			text-align: right;
+			li {
+				float: none;
+				border: none;
+				margin: 0;
+				padding: 0;
+				.user-menu {
+					right: -2px;
+				}
+			}
+		}
+	}
+}

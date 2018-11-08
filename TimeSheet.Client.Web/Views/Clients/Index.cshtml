@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+@model TimeSheet.Client.Web.Models.Client.ClientsViewModel
+
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="target-densitydpi=device-dpi" />
+    <title>TimeSheet</title>
+    <meta name="description" content="" />
+</head>
+<body>
+
+
+    <h2><i class="ico clients"></i>Clients</h2>
+    @Html.Partial("_FilterByName", Model.FilterViewModel)
+
+    @Html.Partial("_CreateClient", Model.NewClient)
+    @Html.Partial("_FilterByFirstLetter", Model.FilterViewModel)
+    @foreach (var client in Model.Clients)
+    {
+        if (client.IsUpdated)
+        {
+            @Html.Partial("_Client", client)
+        }
+        else
+        {
+            @Html.Action("GetClient", new {clientVM = client});
+        }
+
+    }
+    @Html.Partial("_Pagination")
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+                if (@Model.ModelHasErrors.ToString().ToLower())
+                    $('#createDialog')[0].click();
+        });
+    </script>
+</body>
+</html>

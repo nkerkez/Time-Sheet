@@ -1,0 +1,69 @@
+﻿@model TimeSheet.Client.Web.Models.Client.ClientViewModel
+    @{
+        string className = "item";
+        string display = "none";
+        if(Model.IsUpdated)
+        {
+            className += " open";
+            display = "initial";
+        }
+    }
+<div class="accordion-wrap clients">
+    <div class= "@className">
+        <div class="heading">
+            <span>@Model.Name</span>
+            <i>+</i>
+        </div>
+        <div class="details" style="display : @display">
+            @using (Html.BeginForm("Update", "Clients", FormMethod.Post))
+            {
+              
+            <ul class="form">
+                @Html.HiddenFor(x => x.Id)
+                <li>
+                    <label>Client name:</label>
+                    @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "in-text" } })
+                    @Html.ValidationMessageFor(x => Model.Name)
+                </li>
+                <li>
+                    <label>Zip/Postal code:</label>
+                    @Html.EditorFor(x => x.PostalCode, new { htmlAttributes = new { @class = "in-text" } })
+                    @Html.ValidationMessageFor(x => Model.PostalCode)
+                    
+                </li>
+            </ul>
+                <ul class="form">
+                    <li>
+                        <label>Address:</label>
+                        @Html.EditorFor(x => x.Address, new { htmlAttributes = new { @class = "in-text" } })
+                        @Html.ValidationMessageFor(x => Model.Address)
+                        
+                        </li>
+                    @if (Model.Countries != null)
+                    {
+                    <li>
+                        <label>Country:</label>
+
+                        @Html.DropDownList("CountryId", Model.Countries)
+                        @Html.ValidationMessageFor(x => Model.CountryId)
+                        </li>
+                    }
+                </ul>
+                <ul class="form last">
+                    <li>
+                        <label>City:</label>
+                        @Html.EditorFor(x => x.City, new { htmlAttributes = new { @class = "in-text" } })
+                        @Html.ValidationMessageFor(x => Model.City)
+                        </li>
+                </ul>
+                <div class="buttons">
+                    <div class="inner">
+                        <button type="submit" href="javascript:;" class="btn green">Save</button>
+                        @Html.ActionLink("Delete", "Delete", "Clients", new { id = Model.Id }, new { @class = "btn red" })
+                        @*<a href="javascript:;" class="btn red">Delete</a>*@
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

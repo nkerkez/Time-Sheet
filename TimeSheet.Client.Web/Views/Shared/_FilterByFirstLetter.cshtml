@@ -1,0 +1,30 @@
+﻿@model TimeSheet.Client.Web.Models.Filter.FilterViewModel
+@{ 
+    
+    string GetCssClass(TimeSheet.Client.Web.Models.Filter.State state)
+    {
+        if (state == TimeSheet.Client.Web.Models.Filter.State.ACTIVE)
+        {
+            return "active";
+        }
+        else if (state == TimeSheet.Client.Web.Models.Filter.State.DISABLED)
+        {
+            return  "disabled";
+        }
+        else
+        {
+            return  "";
+
+        }
+    }
+}
+<div class="alpha">
+    <ul>
+        @foreach (var button in Model.Buttons)
+        {
+            <li class="@GetCssClass(button.State)">
+                @Html.ActionLink(button.Letter.ToString(), Model.ActionName, Model.ControllerName, new { letter = button.Letter }, null)
+            </li>
+        }
+    </ul>
+</div>

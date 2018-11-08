@@ -1,0 +1,22 @@
+﻿@model TimeSheet.Client.Web.Models.Layout.LayoutViewModel
+<ul class="menu">
+    <li>
+        @Html.ActionLink("TimeSheet", "Index", "Home", null, new { @class = "TimeSheet".Equals(Model.MenuItemName) ? "btn nav active" : "btn nav" })
+    </li>
+    <li>
+        @Html.ActionLink("Clients", "Index", "Clients", null, new { @class = "Client".Equals(Model.MenuItemName) ? "btn nav active" : "btn nav" })
+
+    </li>
+    <li>
+        @Html.ActionLink("Projects", "Index", "Projects", null, new { @class = "Project".Equals(Model.MenuItemName) ? "btn nav active" : "btn nav" })
+    </li>
+    <li>
+        @Html.ActionLink("Categories", "Index", "Categories", null, new { @class = "Category".Equals(Model.MenuItemName)  ? "btn nav active" : "btn nav" })
+    </li>
+    <li>
+        @Html.ActionLink("Team members", "Index", "TeamMembers", null, new { @class = "TeamMember".Equals(Model.MenuItemName) ? "btn nav active" : "btn nav" })
+    </li>
+    <li class="last">
+        <a href="reports.html" class="btn nav">Reports</a>
+    </li>
+</ul>

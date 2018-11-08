@@ -1,0 +1,95 @@
+
+@mixin btn {
+	height: 28px;
+	line-height: 26px;
+	@include border-radius(5px);
+	color: $white;
+	font-size: 13px;
+	display: inline-block;
+	padding: 0 20px;
+	border: solid 1px $orange-dark;
+
+	&.orange {
+		border-color: $orange-dark;
+		@include background(linear-gradient($orange, $orange-dark));
+		@include filter-gradient($orange, $orange-dark);
+
+		&:hover {
+			border-color: $orange;
+			background: $orange;
+		}
+	}
+	&.red {
+		border-color: #c44741;
+		@include background(linear-gradient(#ec5d59, #be3730));
+		@include filter-gradient(#ec5d59, #be3730);
+
+		&:hover {
+			border-color: #be3730;
+			background: #be3730;
+		}
+	}
+	&.green {
+		border-color: #52a552;
+		@include background(linear-gradient(#61c261, #51a451));
+		@include filter-gradient(#61c261, #51a451);
+
+		&:hover {
+			border-color: #51a451;
+			background: #51a451;
+		}
+	}
+	&.grey {
+		border-color: #ddd;
+		@include background(linear-gradient(#fff, #ececec));
+		@include filter-gradient(#fff, #ececec);
+		color: $grey-dark;
+
+		&:hover {
+			border-color: #ececec;
+			background: #ececec;
+		}
+	}
+	&.white {
+		background: $white;
+		color: $grey-dark;
+		padding: 0 12px;
+		position: relative;
+		border-color: $white;
+		i {
+			position: absolute;
+			top: 5px;
+		}
+		span {
+			padding-left: 20px;
+			display: inline-block;
+		}
+		&:hover {
+			color: #333;
+			border-color: #333;
+		}
+	}
+	&.nav {
+		height: 38px;
+		line-height: 36px;
+		border: solid 1px $gray-middle;
+		border-bottom: 8px solid $gray-middle;
+		@include background(linear-gradient(#eee, #ddd));
+		@include filter-gradient(#eee, #ddd);
+		color: $grey-dark;
+		@include border-radius(5px 5px 0 0);
+
+		&:hover,
+		&.active {
+			border-color: #ababab;
+			color: $orange-dark;
+			@include box-shadow(0 1px 1px rgba(132,132,132,.18));
+		}
+		&.active {
+			height: 42px;
+			line-height: 42px;
+			margin-top: -4px;
+			background: $white;
+		}
+	}
+}

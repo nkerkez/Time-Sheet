@@ -1,0 +1,566 @@
+/*----------  libraries
+------------------------------------------------------------------------------*/
+
+@import "compass";
+@import "lib/reset";
+@import "lib/jquery-ui-1.9.2.custom.min";
+@import "lib/fancybox";
+
+/*----------  helpers
+------------------------------------------------------------------------------*/
+
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/typography";
+@import "helpers/helpers";
+@import "helpers/ie";
+
+/*----------  main
+------------------------------------------------------------------------------*/
+
+@import "partials/buttons";
+@import "partials/forms";
+@import "partials/icons";
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+
+/*----------  styles
+------------------------------------------------------------------------------*/
+
+.content {
+	min-height: 500px;
+	padding: 15px;
+	background: $white;
+	@include border-radius (0 0 5px 5px);
+	border: solid 1px $grey-light;
+	border-top: none;
+	width: 100%;
+	@include box-sizing(border-box);
+	overflow: hidden;
+}
+
+/*----------  styles
+------------------------------------------------------------------------------*/
+
+.logo-wrap {
+	width: 100%;
+	overflow: hidden;
+	background: url(../images/login-intro-wrap-bg.png) no-repeat center bottom;
+	.inner {
+		width: 322px;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		img {
+			margin: 50px auto 0 auto;
+		}
+	}
+}
+.centered-content-wrap {
+	width: 100%;
+	overflow: hidden;
+	background: url(../images/login-content-wrap-bg.png) no-repeat center bottom;
+	padding-bottom: 94px;
+	.centered-block {
+		width: 322px;
+		margin: 20px auto 20px auto;
+		padding: 10px;
+		background: $white;
+		overflow: hidden;
+		padding: 15px;
+		@include border-radius (5px);
+		border: solid 10px #E4E4E4;
+		ul {
+			li {
+				margin-bottom: 15px;
+				.link {
+					margin-right: 15px;
+				}
+				.in-label {
+					margin-right: 10px;
+				}
+				&.last {
+					height: 28px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+}
+
+/*----------  default table
+------------------------------------------------------------------------------*/
+
+.default-table {
+	width: 100%;
+	border-bottom: 1px solid #999;
+	margin-bottom: 15px;
+	tr {
+
+		td {
+			padding: 10px 5px 0 5px;	
+			color: $grey;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}	
+			&.small {
+				width: 35px;
+			}	
+			select {
+				width: 160px;
+			}
+			input.medium {
+				width: 160px;
+			}
+		}
+		th {
+			text-align: left;
+			font-weight: normal;
+			border-top: 1px solid #999;
+			border-bottom: 1px solid #999;
+			padding: 10px 0;
+			color: $grey;
+			font-weight: bold;
+			em {
+				color: $orange-dark;
+			}
+			&.small {
+				width: 55px;
+			}	
+		}
+		&:last-child {
+			td {
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
+/*----------  timeline
+------------------------------------------------------------------------------*/
+
+.grey-box-wrap {
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 15px;
+	background: $grey-lighter;
+	@include border-radius (5px 5px 0 0);
+	.top {
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+		overflow: hidden;
+		border-bottom: 1px solid $white;
+		margin-bottom: 10px;
+		@include box-sizing(border-box);
+		.center {
+			text-align: center;
+			width: 48%;
+			display: block;
+			float: left;
+			color: $grey-darker;
+			font-size: 14px;
+		}
+		.prev,
+		.next {
+			width: 25%;
+			color: $orange-dark;
+			display: inline-block;
+			font-weight: bold;
+			&:hover {
+				text-decoration: underline;
+			}
+			i {
+				display: inline-block;
+				margin-top: 3px;
+			}
+		}
+		.prev {
+			float: left;
+			i {
+				@include sprite('paging-left-arrow');
+				margin-right: 10px;
+			}
+		}
+		.next {
+			float: right;
+			text-align: right;
+			i {
+				@include sprite('paging-right-arrow');
+				margin-left: 10px;
+			}
+		}
+	}
+	.bottom {
+		width: 100%;
+
+			border-bottom: 1px solid $gray-middle;
+		.days {
+			margin-left: 15px;
+			overflow: hidden;
+			li {
+				float: left;
+				margin-right: 2px;
+				width: 99px;
+				padding: 5px;
+				@include border-radius (5px 5px 0 0 );
+				border: 1px solid $gray-middle;
+				border-bottom: none;
+				background: $white;
+				a {
+					color: $grey;
+					span {
+						display: block;
+						clear: both;
+						text-transform: uppercase;
+						font-weight: bold;
+					}
+					b {
+						float: left;
+						font-size: 11px;
+						font-weight: normal;
+					}
+					i {
+						float: right;
+						font-size: 11px;
+						font-style: normal;
+					}
+				}
+				&.last {
+					margin: 0;
+				}
+				&.active,
+				&:hover {
+					border: solid 1px $orange-dark;
+					a {
+						color: $white;
+					}
+				}
+				&.active {
+					@include background(linear-gradient($orange, $orange-dark));
+					@include filter-gradient($orange, $orange-dark);
+				}
+				&:hover {
+					background: $orange;
+					@include days-hover;
+				}
+			}
+		}
+	}
+}
+
+/*----------  total hours
+------------------------------------------------------------------------------*/
+
+.total {
+	width: 100%;
+	margin: 15px 0;
+	overflow: hidden;
+	span {
+		float: right;
+		font-size: 14px;
+		color: $white;
+		background: $orange-dark;
+		padding: 0 5px;
+	}
+	em {
+		font-style: normal;
+	}
+	a {
+		float: left;
+		color: $orange-dark;
+		display: inline-block;
+		font-weight: bold;
+		&:hover {
+			text-decoration: underline;
+		}
+		i {
+			display: inline-block;
+			margin-right: 10px;
+			@include sprite('paging-left-arrow');
+		}
+	}
+}
+
+/*----------  reports
+------------------------------------------------------------------------------*/
+
+.reports {
+	padding: 10px;
+	@include box-sizing(border-box);
+	@include border-radius (5px);
+}
+
+/*----------  accordion
+------------------------------------------------------------------------------*/
+
+.accordion-wrap {
+	width: 100%;
+	float: left;
+	.item {
+		width: 100%;
+		margin-bottom: 5px;
+		float: left;
+		&:hover,
+		&.open {
+			.heading {
+				background: $grey-light;
+				span {color: #333;}
+			}
+		}
+		&.open {
+			.heading {
+				i {
+					@include sprite('acc-closed');
+				}
+			}
+		}
+	}
+	.heading {
+		@include background(linear-gradient(#eee, #ddd));
+		@include filter-gradient(#eee, #ddd);
+		width: 100%;
+		height: 34px;
+		line-height: 34px;
+		border-top: 1px solid #bdbdbd;
+		padding: 0 15px;
+		@include box-sizing(border-box);
+		cursor: pointer;
+		span {
+			color: $grey;
+			font-size: 14px;
+		}
+		i {
+			float: right;
+			@include sprite('acc-open');
+			display: inline-block;
+			text-indent: -9999px;
+			margin-top: 9px;
+		}
+	}
+	.details {
+		display: none;		
+		margin: 10px;
+		overflow: hidden;
+		.buttons {
+			width: 100%;
+			overflow: hidden;
+			margin-top: 15px;
+			border-top: 1px solid $grey-light;
+			padding-top: 15px;
+			.inner {
+				float: right;
+			}
+		}
+	}
+}
+
+/*----------  members page
+------------------------------------------------------------------------------*/
+
+.new-member-wrap {
+	display: none;	
+}
+.new-member-inner {
+	width: 300px;
+	overflow: auto;
+	.form {
+		border-bottom: 1px solid $grey-light;
+		padding-bottom: 15px;
+		margin: 0 0 15px 0;
+		width: 285px;
+		input[type="text"] {
+			width: 100%;
+		}
+	}
+	.buttons {
+		.inner {
+			text-align: center;
+		}
+	}
+}
+
+/*----------  search
+------------------------------------------------------------------------------*/
+
+.search-page {
+	float: right;
+}
+
+.alpha {
+	width: 100%;
+	float: left;
+	
+	ul {
+		margin-left: 8px;
+		overflow: hidden;
+	}
+	li {
+		float: left;
+		margin: 0 5px 15px 0;
+		&.last {
+			margin-right: 0;
+		}
+		&.active,
+		&:hover {
+			a {
+				color: $white;
+				background: $orange;
+				border-color: $orange;
+			}
+		}
+		&.disabled {
+			a {
+				color: $grey-light;
+				background: $grey-lighter;
+				border-color: $grey-lighter;
+				cursor: default;
+			}
+			&:hover {
+				@extend .disabled;
+			}
+		}
+	}
+	a {
+		text-transform: uppercase;
+		background: #eee;
+		border: 1px solid #bdbdbd;
+		@include border-radius (5px);
+		display: block;
+		width: 24px;
+		height: 24px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: bold;
+		color: $orange;
+	}
+}
+
+/*----------  search
+------------------------------------------------------------------------------*/
+
+.month-table {
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+	tr {
+		&.mobile-head {
+			display: none;
+		}
+		th {
+			text-transform: uppercase;
+			
+			
+			span {
+				display: inline-block;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			width: 100%;
+			}
+		}
+		td {
+			width: 14%;
+			border: 1px solid $gray-middle;
+			.date{
+				width: 100%;
+				padding: 5px;
+				@include box-sizing(border-box);
+				color: $grey-darker;
+			}
+			&.previous,
+			&.next {
+				.date {
+					color: $text;
+				}
+			}
+			.hours {
+				width: 100%;
+				padding: 10px 5px;
+				@include box-sizing(border-box);
+				a {
+					color: $grey;
+					font-weight: bold;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				
+			}
+			&.positive {
+				.hours {
+					@include background(linear-gradient($positive-light, $positive-dark));
+					@include filter-gradient($positive-light, $positive-dark);
+				}
+			}
+			&.negative {
+				.hours {
+					@include background(linear-gradient($negative-light, $negative-dark));
+					@include filter-gradient($negative-light, $negative-dark);
+				}
+			}
+			&.disable {
+				background: $grey-lighter;
+				.date {
+					color: $gray-middle;
+				}
+				.hours {
+					a {
+						color: $gray-middle;
+						cursor: default;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include responsive(smartphone) {
+		tr {
+			&.head {
+				display: none;
+			}
+			&.mobile-head {
+				display: table-row;
+			}
+		}
+	}
+}
+
+/*----------  search
+------------------------------------------------------------------------------*/
+
+.pagination {
+	width: 100%;
+	float: left;
+	margin-top: 10px;
+	text-align: center;
+	border-top: 1px dotted $grey-dark;
+	padding-top: 5px;
+	ul {
+		margin: 0 auto;
+		display: inline-block;
+		li {
+			display: inline-block;
+			float: left;
+			border-right: 1px solid $grey-lighter;
+			&.last {
+				border-right: none;
+			}
+			a {
+				padding: 0 10px;
+				display: block;
+				color: $orange;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

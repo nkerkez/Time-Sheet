@@ -1,0 +1,60 @@
+﻿@model TimeSheet.Client.Web.Models.Client.ClientViewModel
+<script type="text/javascript">
+   
+    //$(function () {
+
+    //    $(".in-text").focusin(function () {
+    //        console.log("focus")
+    //        var data = $("#clientForm").serialize();
+    //        console.log(data);
+    //        if (!$("#clientForm").valid()) {
+    //            return false;
+    //        }
+    //    });
+    //});
+    
+</script>
+<div class="new-member-wrap">
+    <div id="new-member" class="new-member-inner">
+        <h2>Create new client</h2>
+
+        @using (Html.BeginForm("Create", "Clients", FormMethod.Post,  new { id = "clientForm"} ))
+        {
+            <ul class="form">
+                <li>
+                    <label>Client name:</label>
+                    @Html.TextBoxFor(x => Model.Name, new { @class = "in-text" })
+                    @Html.ValidationMessageFor(x => Model.Name)
+                </li>
+                <li>
+                    <label>Address:</label>
+                    @Html.TextBoxFor(x => Model.Address, new { @class = "in-text" })
+                    @Html.ValidationMessageFor(x => Model.Address)
+                </li>
+                <li>
+                    <label>City:</label>
+                    @Html.TextBoxFor(x => Model.City, new { @class = "in-text" })
+                    @Html.ValidationMessageFor(x => Model.City)
+                </li>
+                <li>
+                    <label>Zip/Postal code:</label>
+                    @Html.TextBoxFor(x => Model.PostalCode, new { @class = "in-text" })
+                    @Html.ValidationMessageFor(x => Model.PostalCode)
+                </li>
+                <li>
+                    <label>country:</label>
+                    @Html.DropDownList("CountryId", Model.Countries)
+                    @Html.ValidationMessageFor(x => Model.CountryId)
+                </li>
+            </ul>
+            <div class="buttons">
+                <div class="inner">
+                    <button href="javascript:;" class="btn green">Save</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+

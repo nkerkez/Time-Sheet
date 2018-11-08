@@ -1,0 +1,11 @@
+﻿@model TimeSheet.Client.Web.Models.Filter.FilterViewModel
+<div class="grey-box-wrap reports">
+    <a href="#new-member" class="link new-member-popup" id="createDialog">@Model.Title</a>
+    <div class="search-page">
+            @using (Html.BeginForm(Model.ActionName, Model.ControllerName, FormMethod.Get))
+            {
+                <input type="search" name="name" class="in-search" />
+            }
+    </div>
+    
+</div>

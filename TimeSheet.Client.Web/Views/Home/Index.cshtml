@@ -1,0 +1,448 @@
+﻿@model TimeSheet.Client.Web.Models.TimeSheet.TimeSheetViewModel
+<!--
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+    -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    
+
+</head>
+<body>
+    
+    
+                <h2><i class="ico timesheet"></i>TimeSheet</h2>
+                <div class="grey-box-wrap">
+                    <div class="top">
+                        <a href="javascript:;" class="prev"><i></i>previous month</a>
+                        <span class="center">February, 2013</span>
+                        <a href="javascript:;" class="next">next month<i></i></a>
+                    </div>
+                    <div class="bottom">
+
+                    </div>
+                </div>
+                <table class="month-table">
+                    <tr class="head">
+                        <th><span>monday</span></th>
+                        <th>tuesday</th>
+                        <th>wednesday</th>
+                        <th>thursday</th>
+                        <th>friday</th>
+                        <th>saturday</th>
+                        <th>sunday</th>
+                    </tr>
+                    <tr class="mobile-head">
+                        <th>mon</th>
+                        <th>tue</th>
+                        <th>wed</th>
+                        <th>thu</th>
+                        <th>fri</th>
+                        <th>sat</th>
+                        <th>sun</th>
+                    </tr>
+                    <tr>
+                        <td class="positive previous">
+                            <div class="date">
+                                <span>28.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive previous">
+                            <div class="date">
+                                <span>29.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive previous">
+                            <div class="date">
+                                <span>30.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive previous">
+                            <div class="date">
+                                <span>31.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>1.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>2.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>3.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="positive">
+                            <div class="date">
+                                <span>4.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>5.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>6.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>7.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>8.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>9.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>10.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="positive">
+                            <div class="date">
+                                <span>11.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>12.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>13.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>14.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>15.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>16.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>17.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="negative">
+                            <div class="date">
+                                <span>18.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>4</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>19.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="positive">
+                            <div class="date">
+                                <span>20.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>7.5</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date">
+                                <span>21.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>22.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>23.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>24.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="disable">
+                            <div class="date">
+                                <span>25.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>26.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>27.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>28.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>1.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>2.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="disable">
+                            <div class="date">
+                                <span>3.</span>
+                            </div>
+                            <div class="hours">
+                                <a href="days.html">
+                                    Hours: <span>0</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="total">
+                    <span>Total hours: <em>90</em></span>
+                </div>
+        
+    <!-- javascript
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write("<script src='assets/scripts/main/jquery-1.8.3.min.js'>\x3C/script>")</script>
+    <script type="text/javascript" src="assets/scripts/main/default.js"></script>-->
+    <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    
+</body>
+</html>

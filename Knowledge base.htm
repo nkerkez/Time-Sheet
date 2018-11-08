@@ -1,0 +1,1666 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0066)http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/ -->
+<!DOCTYPE html PUBLIC "" ""><!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]--><!--[if IE 7]>         <html class="no-js ie7"> <![endif]--><!--[if IE 8]>         <html class="no-js ie8"> <![endif]--><!--[if gt IE 8]><!--><HTML 
+class="no-js"><!--<![endif]--><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+	 
+<META charset="utf-8">	 
+<META http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">	 
+<META name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0">
+	 <LINK href="/favicon.ico" rel="icon">	 <TITLE>Knowledge base</TITLE>	 
+<META name="description" content="">	 <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+	Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+	For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+	 
+<SCRIPT src="Knowledge%20base_files/modernizr-2.8.3-respond-1.4.2.min.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT src="Knowledge%20base_files/detectizr.min.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT type="text/javascript">var searchUrl = '/searchresults/';</SCRIPT>
+	 <!-- CSS -->	 <LINK href="Knowledge%20base_files/css.css" rel="stylesheet">
+	 <LINK href="Knowledge%20base_files/style.css" rel="stylesheet" 
+type="text/css">	 <!--IE Stylesheet less than 9 -->	 <!--[if (lt IE 9)&(gte IE 7)]>
+		<link rel="stylesheet" href="css/ie.css" type="text/css">
+	<![endif]--> 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY>
+<DIV class="container"><HEADER class="header">
+<DIV class="row">
+<DIV class="col-xs-8 col-md-9"><A class="logo" href="http://kb.vegait.rs/"><IMG 
+alt="Vega IT Coding Guidelines" src="Knowledge%20base_files/logo.png">					 </A>
+				 </DIV>
+<DIV class="col-xs-4 col-md-3 search">
+<DIV 
+class="in"><INPUT name="query" id="tboxHeaderSearch" type="text" placeholder="Search..." value="">
+						 <A class="fa fa-search" id="lnkHeaderSearch" href="javascript:;"></A>
+					 </DIV><A class="ico hamburger" id="lnkHeaderSearchButton" href="javascript:;"></A>
+				 </DIV></DIV></HEADER>
+<DIV class="content">
+<DIV class="row">
+<DIV class="col-md-3 sidebar">
+<UL class="sidebar-nav">
+  <LI class="expanded"><A href="http://kb.vegait.rs/developement/">
+  				Development <I></I>			</A>
+  <UL class="sub-nav" style="padding-left: 22px; display: block;">
+    <LI class="expanded"><A href="http://kb.vegait.rs/developement/net/">
+    				.NET <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px; display: block;">
+      <LI class="expanded"><A href="http://kb.vegait.rs/developement/net/guidelines/">
+      				Guidelines <I></I>			</A>
+      <UL class="sub-nav" style="padding-left: 22px; display: block;">
+        <LI class="expanded"><A class="active" href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/">
+        				Coding Guidelines			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/guidelines/branching-and-building-guidelines/">
+        				Branching and Building Guidelines			 </A></LI></UL></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/code-reviews/">				Code 
+      Reviews <I></I>			</A>
+      <UL class="sub-nav" style="padding-left: 22px;">
+        <LI><A href="http://kb.vegait.rs/developement/net/code-reviews/2010-09-30/">
+        				2015 09 29			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/code-reviews/2015-10-06/">
+        				2015 10 06			 </A></LI></UL></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/aspnet-security/">
+      				ASP.NET Security <I></I>			</A>
+      <UL class="sub-nav" style="padding-left: 22px;">
+        <LI><A href="http://kb.vegait.rs/developement/net/aspnet-security/redirecting-from-http-to-https/">
+        				Redirecting from HTTP to HTTPS			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/aspnet-security/xss-prevention/">
+        				XSS Prevention			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/aspnet-security/httponly-cookie/">
+        				HttpOnly Cookie			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/aspnet-security/prevent-software-versions-disclosure/">
+        				Prevent Software Versions Disclosure			 </A></LI></UL></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/cms/">				CMS 
+      <I></I>			</A>
+      <UL class="sub-nav" style="padding-left: 22px;">
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/drawing-the-content-diagram/">
+        				Drawing the content diagram			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/project-details/">
+        				Project Details			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/">
+        				Umbraco <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/information-all-of-us-should-know/">
+          				Information - all of us should know   <I></I>			</A>
+          <UL class="sub-nav" style="padding-left: 22px;">
+            <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/information-all-of-us-should-know/functionality-related-information/">
+            				Functionality-related information 			 </A></LI>
+            <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/information-all-of-us-should-know/multi-lingual-i-multi-website/">
+            				Multi-lingual i Multi-website 			 </A></LI></UL></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/umbraco-starter/">
+          				Developing with Umbraco			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/data-types-packages/">
+          				Packages <I></I>			</A>
+          <UL class="sub-nav" style="padding-left: 22px;">
+            <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/data-types-packages/umbraco-forms/">
+            				Umbraco Forms			 </A></LI>
+            <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/data-types-packages/rjp/">
+            				RJP			 </A></LI>
+            <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/data-types-packages/nested-content/">
+            				Nested Content			 </A></LI>
+            <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/data-types-packages/rte-richtext-editor/">
+            				RTE (RichText Editor)			 </A></LI></UL></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/users/">
+          				Users			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/umbraco-versions-known-problems/">
+          				Umbraco versions - known problems			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/currently-under-the-investigation/">
+          				Currently under the investigation...			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/test-solution/">
+          				Test solution			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/umbraco/interesting-links/">
+          				Interesting links			 </A></LI></UL></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/working-with-html-starter/">
+        				Working with HTML starter			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/episerver/">
+        				EPiServer			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/code-review-general-feedback/">
+        				Code review - general feedback			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/seo-analytics/">
+        				SEO, Analytics <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/seo-analytics/meta-tags-robotstxt/">
+          				Meta tags &amp; robots.txt			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/seo-analytics/xml-sitemap/">
+          				XML Sitemap			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/seo-analytics/canonicalization/">
+          				Canonical links			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/seo-analytics/social-network-meta-tags/">
+          				Social Network meta tags			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/seo-analytics/seo-site-name/">
+          				SEO Site Name			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/seo-analytics/google-tag-manager-google-analytics/">
+          				Google Tag Manager			 </A></LI></UL></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/deployments/">
+        				Deployments <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/deployments/release/">
+          				Release			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/deployments/rad-sa-serverima/">
+          				Rad sa Serverima 			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/deployments/redirects/">
+          				Redirects			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/deployments/stagelive-checklist/">
+          				STAGE/LIVE - checklist			 </A></LI></UL></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/configuration/">
+        				Configuration <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/configuration/default-admin-email/">
+          				Default admin email			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/configuration/git/">
+          				Git			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/configuration/smtp/">
+          				SMTP			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/configuration/exception-handling/">
+          				Exception handling 			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/configuration/configuring-iis/">
+          				Configuring IIS			 </A></LI></UL></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/content-loading/">
+        				Content loading 			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/net/cms/accounts/">
+        				Accounts <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/accounts/accounts-and-server-details/">
+          				Accounts and server details			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/accounts/browserstack/">
+          				BrowserStack			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/net/cms/accounts/vega-vpn-rdc/">
+          				Vega VPN &amp; RDC 			 </A></LI></UL></LI></UL></LI></UL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/front-end-development/">
+    				Front-end Development <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px;">
+      <LI><A href="http://kb.vegait.rs/developement/front-end-development/initial-steps/">
+      				Initial steps			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/front-end-development/guidlines/">
+      				Guidelines			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/front-end-development/semantics-and-accessibility/">
+      				Semantics and accessibility			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/front-end-development/semantics-useful-links/">
+      				Semantics - useful links			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/front-end-development/front-end-performance/">
+      				Front-end Performance			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/front-end-development/tips-and-tricks/">
+      				Tips and tricks <I></I>			</A>
+      <UL class="sub-nav" style="padding-left: 22px;">
+        <LI><A href="http://kb.vegait.rs/developement/front-end-development/tips-and-tricks/gulp-tutorial/">
+        				Gulp tutorial			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/front-end-development/tips-and-tricks/dust-starter/">
+        				Dust starter			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/front-end-development/tips-and-tricks/grunt-tutorial/">
+        				Grunt tutorial			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/front-end-development/tips-and-tricks/books-links-tutorials/">
+        				Books, links, tutorials,...			 </A></LI></UL></LI></UL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/mobile/">				Mobile 
+    <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px;">
+      <LI><A href="http://kb.vegait.rs/developement/mobile/android/">				Android 
+      <I></I>			</A>
+      <UL class="sub-nav" style="padding-left: 22px;">
+        <LI><A 
+        href="http://kb.vegait.rs/developement/mobile/android/guidlines/">
+        				Guidlines			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/mobile/android/ribot-android-guidlines/">
+        				Ribot Android guidlines <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/mobile/android/ribot-android-guidlines/project-and-code-style-guidlines/">
+          				Project and code style guidlines			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/android/ribot-android-guidlines/architecture-guidelines/">
+          				Architecture Guidelines			 </A></LI></UL></LI></UL></LI>
+      <LI><A href="http://kb.vegait.rs/developement/mobile/ios/">				iOS 
+      <I></I>			</A>
+      <UL class="sub-nav" style="padding-left: 22px;">
+        <LI><A href="http://kb.vegait.rs/developement/mobile/ios/creating-ios-appleid-without-credit-card-guide/">
+        				Creating iOS AppleID without credit card - guide			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/mobile/ios/guidlines/">
+        				Guidlines <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/guidlines/objective-c-style-guide/">
+          				Objective-C style guide			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/guidlines/swift-style-guide/">
+          				Swift style guide			 </A></LI></UL></LI>
+        <LI><A href="http://kb.vegait.rs/developement/mobile/ios/photoshop-for-mac/">
+        				Photoshop for Mac			 </A></LI>
+        <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/">
+        				Tips, trick, tutorials... <I></I>			</A>
+        <UL class="sub-nav" style="padding-left: 22px;">
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/uitextfield-pickers/">
+          				UITextField Pickers			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/navigation-segue-vs-code/">
+          				Navigation (Segue vs Code)			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/table-view-register-nib/">
+          				Table view register Nib			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/sockets-in-swift/">
+          				Sockets			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/orientation-mode/">
+          				Orientation mode			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/automatic-scrolling-input-fields/">
+          				Automatic scrolling input fields			 </A></LI>
+          <LI><A href="http://kb.vegait.rs/developement/mobile/ios/tips-trick-tutorials/massive-view-controller/">
+          				Massive View Controller			 </A></LI></UL></LI></UL></LI></UL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/php/">				PHP <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px;">
+      <LI><A href="http://kb.vegait.rs/developement/php/drupal/">				Drupal
+      			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/php/wordpress/">
+      				Wordpress			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/php/magento/">				Magento
+      			 </A></LI></UL></LI></UL></LI>
+  <LI><A href="http://kb.vegait.rs/culture-book/">				Knjiga organizacione 
+  kulture <I></I>			</A>
+  <UL class="sub-nav" style="padding-left: 22px;">
+    <LI><A href="http://kb.vegait.rs/culture-book/1-a-welcome-note-from-one-of-the-founders/">
+    				1. Pozdravna reč jednog od osnivača			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/">
+    				2. O našoj kompaniji i njenoj kulturi <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px;">
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/21-vision-and-mission/">
+      				2.1. Vizija i misija			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/22-our-values/">
+      				2.2. Naše vrednosti			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/23-why-we-experiment-invest-and-grow/">
+      				2.3. Zbog čega eksperimentišemo, ulažemo, rastemo			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/24-our-colleagues-success-stories/">
+      				2.4. Uspešne price naših kolega			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/25-calculation-of-wages-and-awarding-raises/">
+      				2.5. Kako se određuju visine zarada i dodeljuju povišice			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/26-the-structure-of-our-organisation/">
+      				2.6. Struktura naše organizacije			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/27-is-the-client-always-right/">
+      				2.7. Da li je klijent uvek u pravu?			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/28-communication-with-clients-and-approach-to-projects/">
+      				2.8. Komunikacija sa klijentima i pristup projektima			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/29-a-learning-organisation/">
+      				2.9. "A learning organisation"			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/210-supporting-the-local-it-community/">
+      				2.10. Podrška lokalnoj IT zajednici			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/211-overtime-work/">
+      				2.11. Prekovremeni rad			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/212-offices-seating-meetings/">
+      				2.12. Kancelarije, raspored sedenja, sastanci			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/213-switch-project-or-quit-job/">
+      				2.13. Promena projekta ili promena posla			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/214-vega-it-values-you/">
+      				2.14. "Vega IT values you"			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/215-environment-and-recycling-as-part-of-our-organizational-culture/">
+      				2.15. Životna sredina i reciklaža kao deo naše organizacione kulture
+      			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/216-chief-happiness-officer/">
+      				2.16. Chief Happiness Officer			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/217-alumni/">
+      				2.17. Alumni			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/218-additional-information-about-our-company/">
+      				2.18. Dodatne informacije o našoj kompaniji			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/2-about-our-company-and-its-culture21-vision-and-mission/219-things-that-we-are-not-so-good-at/">
+      				2.19. U čemu nismo dobri			 </A></LI></UL></LI>
+    <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/">
+    				3. Praktične informacije za svakodnevni rad <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px;">
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/31-your-first-day-in-vega-it-company/">
+      				3.1. Vaš prvi dan u kompaniji Vega IT			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/32-knowledge-base-web-sajt/">
+      				3.2. "Knowledge Base" web sajt			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/33-googleplus-communities/">
+      				3.3. Google+ Communities			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/34-working-hours/">
+      				3.4. Radno vreme			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/35-dress-code/">
+      				3.5. Dress code			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/36-vacations-sick-leave-and-days-off/">
+      				3.6. Godišnji odmori, bolovanja i slobodni dani			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/37-private-health-insurance/">
+      				3.7. Privatno zdravstveno osiguranje			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/38-terms-of-using-kitchen/">
+      				3.8. Pravila korišcenja kuhinje			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/39-hygiene/">
+      				3.9. Higijena			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/310-happy-hour-team-building-social-activities/">
+      				3.10. "Happy Hour", "Team Building", društvene aktivnosti			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/311-suggestions-asking-questions/">
+      				3.11. Davanje predloga / Postavljanje pitanja			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/312-successful-communication-with-clients-and-colleagues/">
+      				3.12. Uspešna komunikacija sa kolegama, klijentima			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/313-the-use-of-mobile-phones-skype-youtube-and-social-network/">
+      				3.13. Korišćenje mobilnih telefona, Skype-a, YouTube-a i društvenih 
+      mreža			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/314-communication-via-e-mail/">
+      				3.14. Komunikacija putem e-mail-a			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/315-the-obligations-of-all-of-us/">
+      				3.15. Obaveze svih nas			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/316-relaxation-and-conversations-during-breaks-for-lunch/">
+      				3.16. Opuštanje i priča tokom pauze za rucak			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/3-practical-information-for-everyday-operations/317-feedback/">
+      				3.17. Feedback			 </A></LI></UL></LI>
+    <LI><A href="http://kb.vegait.rs/culture-book/4-marketing-and-we/">				4. 
+    Marketing i mi <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px;">
+      <LI><A href="http://kb.vegait.rs/culture-book/4-marketing-and-we/41-linkedin/">
+      				4.1. LinkedIn			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/4-marketing-and-we/42-facebook/">
+      				4.2. Facebook			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/4-marketing-and-we/43-twitter/">
+      				4.3. Twitter			 </A></LI>
+      <LI><A 
+      href="http://kb.vegait.rs/culture-book/4-marketing-and-we/44-blog/">
+      				4.4. Blog			 </A></LI></UL></LI>
+    <LI><A href="http://kb.vegait.rs/culture-book/5-guide-through-portalvegaitsourcingrs/">
+    				5. Vodič kroz portal portal.vegaitsourcing.rs <I></I>			</A>
+    <UL class="sub-nav" style="padding-left: 22px;">
+      <LI><A href="http://kb.vegait.rs/culture-book/5-guide-through-portalvegaitsourcingrs/51-announcements/">
+      				5.1. Obaveštenja / Announcements			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/5-guide-through-portalvegaitsourcingrs/52-vega-its-activity-calendar/">
+      				5.2. Kalendar aktivnosti Vega IT			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/5-guide-through-portalvegaitsourcingrs/53-vacations/">
+      				5.3. Godišnji odmori			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/5-guide-through-portalvegaitsourcingrs/54-overtime/">
+      				5.4. Prekovremeni sati			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/5-guide-through-portalvegaitsourcingrs/55-information-about-employees-in-vega-it-sourcing/">
+      				5.5. Informacije o zaposlenima u "Vega IT Sourcing"			 </A></LI>
+      <LI><A href="http://kb.vegait.rs/culture-book/5-guide-through-portalvegaitsourcingrs/56-schedule-of-conference-rooms/">
+      				5.6. Raspored korišćenja konferencijske sale			 </A></LI></UL></LI>
+    <LI><A href="http://kb.vegait.rs/culture-book/6-giving-back-to-the-community/">
+    				6. Giving back to the community			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/culture-book/7-internship-at-vega-it-sourcing/">
+    				7. Praksa u kompaniji "Vega IT Sourcing"			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/culture-book/8-what-does-our-organizational-culture-mean-for-some-of-our-colleagues/">
+    				8. Šta za neke od naših kolega predstavlja naša organizaciona kultura?
+    			 </A></LI></UL></LI>
+  <LI><A href="http://kb.vegait.rs/star-konferencija/">				STAR Konferencija  
+  <I></I>			</A>
+  <UL class="sub-nav" style="padding-left: 22px;">
+    <LI><A href="http://kb.vegait.rs/star-konferencija/save-the-date/">				SAVE 
+    THE DATE			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/star-konferencija/call-for-speakers/">
+    				CALL FOR SPEAKERS			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/star-konferencija/open-call-for-contributors/">
+    				OPEN CALL FOR CONTRIBUTORS			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/star-konferencija/tickets/">				TICKETS
+    			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/star-konferencija/public-voting/">
+    				PUBLIC VOTING			 </A></LI>
+    <LI><A href="http://kb.vegait.rs/star-konferencija/star-track/">				STAR 
+    TRACK			 </A></LI></UL></LI></UL></DIV>
+<DIV class="col-md-9 main-content">
+<UL class="breadcrumbs hidden-on-mobile">
+  <LI><A href="http://kb.vegait.rs/developement/">Developement</A> /		 </LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/">.NET</A> /		 </LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/">Guidelines</A> 
+  /		 </LI>
+  <LI><SPAN>Coding Guidelines</SPAN>		 </LI></UL><ARTICLE class="col-md-9 rte-content">
+<DIV class="meta">
+<P>Added by 			 <SPAN>admin, 11/15/2015 11:32:40 PM</SPAN>, 			last edited by 
+<SPAN>Nevena Nikolic, 3/27/2017 3:24:10 PM</SPAN>		 </P></DIV>
+<OL class="anchors-list">
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Introduction</A></LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Intended 
+  audience</A></LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Scope 
+  of this document</A></LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Naming 
+  conventions</A>
+  <OL> 
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">General</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Abbrevations</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Acronym 
+    Casing</A>
+    <OL> 
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Acronyms 
+      of two characters</A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Acronyms 
+      of more than two characters</A></LI></OL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Define 
+    "Dont's"</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Namespace 
+    naming template</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Naming 
+    for classes and structures</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Awkward 
+    plural names or words without singular</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Multiple 
+    plural nouns</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Underscores</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Public 
+    members</A></LI></OL></LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Coding</A>
+  <OL> 
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Folders</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Files</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Fields</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Access 
+    modifiers</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Braces</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Formatting</A>
+    <OL> 
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Right 
+      margin</A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Tab 
+      size</A></LI></OL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Order 
+    of members</A>
+    <OL> 
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Class 
+      and struct members</A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Enum 
+      values</A></LI></OL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Named 
+    parameters</A></LI></OL></LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Documentation</A>
+  <OL> 
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Regions</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Integrated 
+    documentation (XML Documentation)</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Comments</A></LI></OL></LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Best 
+  practices</A>
+  <OL> 
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Events</A>
+    <OL> 
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Implementing</A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Calling 
+      events</A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Handling 
+      events</A></LI></OL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Using 
+    application configuration (AppSettings) inside components</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Configuration 
+    sections</A>
+    <OL> 
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Implementation</A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Further 
+      reading</A></LI></OL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Usage 
+    of conditions and conditional operators</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Explicit 
+    casting vs. safe casting</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Native 
+    type vs. structure</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Usage 
+    of var keyword</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Redundant 
+    array type</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Explicit 
+    this keyword</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Exceptions</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Empty 
+    members</A></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Asynchronous 
+    Methods</A></LI></OL></LI>
+  <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Web 
+  Specific Guidelines</A>
+  <OL> 
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Web 
+    Specific Guidelines</A>
+    <OL> 
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">ASP.NET</A></LI>
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Abbreviations</A></LI></OL></LI>
+    <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">Coding</A>
+    <OL> 
+      <LI><A href="http://kb.vegait.rs/developement/net/guidelines/coding-guidelines/#">ASP.NET 
+      events</A></LI></OL></LI></OL></LI></OL>
+<DIV class="description">
+<DIV class="item">
+<H2 class="grey-title">1. Introduction</H2>
+<P>This document defines the coding guidelines for a software development at 
+Vega IT. The aim of this document is to standardize all code written by Vega IT 
+software developers. These guidelines are intended to be enforced during code 
+reviews.</P></DIV>
+<DIV class="item">
+<H2 class="grey-title">2. Intended audience</H2>
+<P>This document is intended for all development personnel attached to Vega IT. 
+Elementary knowledge of .NET and/or ASP.NET development is required.</P></DIV>
+<DIV class="item">
+<H2 class="grey-title">3. Scope of this document</H2>
+<P>This document only describes guidelines that are not a part of Microsoft's 
+official guidelines. Sometimes a guideline is repeated in this document to 
+emphasize the importance of that specific guideline.</P>
+<P>For all other guidelines not mentioned in this document, we refer to the 
+guidelines found in the book "Framework Design Guidelines, Second Edition" in 
+the Microsoft .NET development series, by Krzysztof Cwalina and Brad Abrams 
+(ISBN-1 3: 978-0-321 -54561 -9 / ISBN-1 0: 0-321 -54561 -9).</P></DIV>
+<DIV class="item">
+<H2 class="grey-title">4. Naming conventions</H2></DIV>
+<DIV class="item">
+<H4>4.1 General</H4>
+<P>To ease reading of your code, always use self-describing English (United 
+States) names. When you are writing new code, try to imagine that others need to 
+understand your code as well. Therefore use names that clearly describe their 
+meaning and/or intention.</P>
+<P>.NET has created a philosophy concerning naming and structuring of classes. 
+When given the choice, try to follow the same philosophy as much as you can. 
+This will create a standard in coding classes that exceed the boundaries of the 
+company. Users (external developers familiar with the .NET framework) will find 
+and recognize class members easier when confronted with consistent names. In 
+other words: When devising a new name for a class member you should always look 
+at other members with a comparable function (not only within the boundaries of 
+your project, but at the .NET framework as well). The new name should be the 
+same or at least the same basic style. Following this guideline will increase 
+the "pit-of-success", not only for users but for internal developers as well. 
+Conformity and consistency in your naming is always a key issue.</P>
+<P>When referring to a type in a name, make sure it is .NET language 
+independent.</P>
+<P><STRONG>Example</STRONG></P>
+<P><SPAN class="strike">WriteInt(int value)</SPAN> -&gt; WriteInt32(int 
+value)</P>
+<P>Pascal: pascal casing (e.g. ExtendedPropertyBinder, GetApplication, 
+RecordClassification)</P>
+<P>camel: camel casing (e.g. nextEnumerationValue, userId, defaultLanguage)</P>
+<TABLE border="0">
+  <TBODY>
+  <TR>
+    <TH>Type</TH>
+    <TH>Casing</TH>
+    <TH>Remarks</TH>
+    <TH>Guidelines</TH></TR>
+  <TR>
+    <TD>Namespace</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Don't use prefixes or suffixes.</LI>
+        <LI>Use stable, recognized technology names.</LI>
+        <LI>Must express a collection or concept (context) that groups objects 
+        together. (e.g.: Security, Enumerations)</LI>
+        <LI>In case of a collection use plural.</LI>
+        <LI>Avoid vague concepts like "Context", "Objects" ... etc which do not 
+        describe the context. Exceptions are commonly used concepts like 
+        "Tools", "Core", ...</LI>
+        <LI>Only use an application name inside the namespace if the namespace 
+        contains application specific objects.</LI></UL></TD></TR>
+  <TR>
+    <TD>Class / Structure</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Class name should consist of one or more nouns.</LI>
+        <LI>Don't use prefixes or suffixes</LI>
+        <LI>The most specific parts of the name should be as far as possible in 
+        front of the name.</LI></UL></TD></TR>
+  <TR>
+    <TD>Interface</TD>
+    <TD>Pascal</TD>
+    <TD>Prefix I</TD>
+    <TD>
+      <UL>
+        <LI>Interface name should consist of one or more nouns or adjectives 
+        (that describe the behaviour).</LI>
+        <LI>Use I as prefix, even if the next letter is an I.Examples: 
+        IComponent, IEnumberable, IIterator</LI></UL></TD></TR>
+  <TR>
+    <TD>Enumeration</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Don't use prefixes or suffixes (especially Enum).</LI>
+        <LI>Use a singular name.</LI></UL></TD></TR>
+  <TR>
+    <TD>Enumeration value</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>Flags Enumeration</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Don't use prefixes or suffixes (especially Flag).</LI>
+        <LI>Use plural names.</LI></UL></TD></TR>
+  <TR>
+    <TD>Flags enumeration value</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>Events</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Consider the use of verbs in the name of the event.</LI>
+        <LI>Depending on the timing of your event (before or after something 
+        occurred) the verb will be in the present or past tense.</LI>
+        <LI>Do not use a prefix or suffix in the event declaration (e.g. 
+        OnClose)</LI></UL>Examples: DialogClosing, SaveClick, 
+  CollectionChanged</TD></TR>
+  <TR>
+    <TD>Event handlers</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix EventHandler</TD>
+    <TD>
+      <UL>
+        <LI>The event handler (delegate) should end with EventHandler</LI>
+        <LI>Always implement the signature of the event handler as follows: 
+        <UL>
+          <LI>sender (of type object)</LI>
+          <LI>e (of type EventArgs or derived type)Example: 
+          CollectionEventHandler(object sender, CollectionEventArgs 
+        e)</LI></UL></LI></UL></TD></TR>
+  <TR>
+    <TD>Event argument class</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix EventArgs</TD>
+    <TD>
+      <UL>
+        <LI>The name of event arguments class should always end with 
+        EventArgs.</LI>
+        <LI>Inherits from System.EventArgs</LI></UL>Example: 
+      PropertyBindingCancelEventArgs</TD></TR>
+  <TR>
+    <TD>Base class</TD>
+    <TD>Pascal</TD>
+    <TD>Optional suffix Base</TD>
+    <TD>
+      <UL>
+        <LI>Recommended to use class names with Base suffix for abstract classes 
+        only.</LI>
+        <LI>Optionally ends with Base.</LI>
+        <LI>Never prefix with Base.</LI></UL>Example: CollectionBase, 
+    RecordWrapper</TD></TR>
+  <TR>
+    <TD>Exception class</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Exception</TD>
+    <TD>
+      <UL>
+        <LI>The name of the exception should describe the error or what couldn't 
+        be performed.</LI>
+        <LI>Always ends with Exception.</LI></UL></TD></TR>
+  <TR>
+    <TD>Collection class</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Collection</TD>
+    <TD>
+      <UL>
+        <LI>Must end with Collection.</LI>
+        <LI>For all types implementing IEnumerable, except non-type-specific 
+        collections (Queue, List, Stack, etc.).</LI>
+        <LI>Should not derive from existing .NET collection classes, but use 
+        interfaces or abstract classes instead.</LI></UL></TD></TR>
+  <TR>
+    <TD>Dictionary class</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Dictionary</TD>
+    <TD>
+      <UL>
+        <LI>For all types implementing IDictionary or IDictionary&lt;TKey, 
+        TValue&gt;.</LI>
+        <LI>Should end with Dictionary, expect for non-type-specific 
+        dictionaries (Table, SortedList, etc.).</LI></UL></TD></TR>
+  <TR>
+    <TD>Attribute class</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Attribute</TD>
+    <TD>
+      <UL>
+        <LI>Must end with Attribute.</LI>
+        <LI>Inherits from System.Attribute.</LI></UL></TD></TR>
+  <TR>
+    <TD>Extensions class</TD>
+    <TD>Pascal</TD>
+    <TD>+ "Extensions"</TD>
+    <TD>
+      <UL>
+        <LI>Always of format Extensions(even when it collides with guideline 
+        Multiple plural nouns).</LI>
+        <LI>Always static class.</LI>
+        <LI>One extension class per class that is extended.</LI></UL></TD></TR>
+  <TR>
+    <TD>(Unit) Test class</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Tests</TD>
+    <TD>
+      <UL>
+        <LI>Always ends with Tests (even when it collides with guideline 
+        Multiple plural nouns).</LI></UL></TD></TR>
+  <TR>
+    <TD>Public fields</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>For instance, static and constant fields.</LI></UL></TD></TR>
+  <TR>
+    <TD>Methods</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>The name of the method should consist of one or more verbs or 
+        verb-phrases.Examples: RemoveAll, Invoke, GetCharArray</LI></UL></TD></TR>
+  <TR>
+    <TD>Event handler methods</TD>
+    <TD>Pascal</TD>
+    <TD>+</TD>
+    <TD>
+      <UL>
+        <LI>The name of the method must be of the format .Examples: <BR>- 
+        ButtonSaveClick(object sender, EventArgs e) &nbsp;<BR>- 
+        TextBoxFirstNameTextChanged(…) &nbsp;<BR>- 
+        _WorkerThreadThreadStart(ThreadStart threadStart)</LI></UL></TD></TR>
+  <TR>
+    <TD>Property</TD>
+    <TD>Pascal</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>A property name should consist of one or more nouns.</LI>
+        <LI>Don't use any prefixes.</LI>
+        <LI>Use "On" suffix for DateTime properties when applicable.</LI>
+        <LI>A Boolean property should use the form "Is...","Are...", 
+        &nbsp;"Has..." or "Can...", e.g. IsAvailable, HasChildren, 
+        AreAllValid.</LI></UL></TD></TR>
+  <TR>
+    <TD>Protected or private fields</TD>
+    <TD>camel</TD>
+    <TD>Prefix with underscore</TD>
+    <TD>
+      <UL>
+        <LI>Always prefix with an underscore (_).</LI>
+        <LI>For instance, static and constant fields.</LI></UL></TD></TR>
+  <TR>
+    <TD>Parameters/Method arguments</TD>
+    <TD>camel</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Use names that describe a parameter's meaning rather than names that 
+        describe a parameter's type.</LI>
+        <LI>Prefer names based on their meaning/usages rather than their 
+        type.</LI></UL></TD></TR>
+  <TR>
+    <TD>Local variable</TD>
+    <TD>camel</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Don't use abbreviations.</LI>
+        <LI>Always use names that explain their purpose rather than their 
+        types.</LI>
+        <LI>Usage of i and j as counter variables (only in loops) or x, y, z as 
+        coordinates is allowed.</LI></UL></TD></TR>
+  <TR>
+    <TD>WebForm Controls</TD>
+    <TD>See: <A>Web specific naming conventions</A></TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>Generic type/method arguments</TD>
+    <TD>Pascal</TD>
+    <TD>Prefix T</TD>
+    <TD>
+      <UL>
+        <LI>Always use prefix T.</LI>
+        <LI>Use a name that explains the context of the argument.</LI>
+        <LI>Only in case of very generic classes with one argument (like List) 
+        can the argument consist of the letter T.Examples: CollectionBase, 
+        Table&lt;TKey, TValue&gt;, ClassificationWrapper</LI></UL></TD></TR>
+  <TR>
+    <TD>XML elements</TD>
+    <TD>camel</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Casing can vary if the XML document is part of a more specific 
+        standard (like XAML).</LI></UL></TD></TR>
+  <TR>
+    <TD>XML attributes</TD>
+    <TD>camel</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Casing can vary if the XML document is part of a more specific 
+        standard (like XAML).</LI></UL></TD></TR>
+  <TR>
+    <TD>Configuration Section Groups</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix SectionGroup</TD>
+    <TD>
+      <UL>
+        <LI>The name should be the camel cased name of the configuration section 
+        group name as entered in the XML configuration file.</LI></UL></TD></TR>
+  <TR>
+    <TD>Configuration Sections</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Section</TD>
+    <TD>
+      <UL>
+        <LI>The name should be the camel cased name of the configuration section 
+        name as entered in the XML configuration file.</LI></UL></TD></TR>
+  <TR>
+    <TD>Configuration Element</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Element</TD>
+    <TD>
+      <UL>
+        <LI>The name of the element should reflect its purpose and should be 
+        easily mapped to the actual attribute or element in the XML 
+        configuration file.Examples: DefaultRegistrationElement, 
+        InDesignServerElement</LI></UL></TD></TR>
+  <TR>
+    <TD>Configuration Element Collection</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix ElementCollection</TD>
+    <TD>
+      <UL>
+        <LI>The base name should be the same as the configuration elements 
+        contained within the collection.</LI></UL></TD></TR>
+  <TR>
+    <TD>Unit tests class</TD>
+    <TD>Pascal</TD>
+    <TD>Suffix Tests</TD>
+    <TD>
+      <UL>
+        <LI>Must end with Tests.</LI>
+        <LI>Recommended to reuse the name of the class, if it is the only class 
+        that is being tested. Example: 
+  BusinessObjectCollectionTests</LI></UL></TD></TR>
+  <TR>
+    <TD>Unit test method</TD>
+    <TD>Pascal</TD>
+    <TD>Underscores allowed</TD>
+    <TD>
+      <UL>
+        <LI>Make sure the method's name clearly describes what it's 
+testing.</LI>
+        <LI>Suggested format: Subject_Circumstances_ExpectedResultExamples: 
+        GetMessage_WithFormatString_ReturnsFormattedMessage 
+        ImageReplacement_WithNonExistingPath_ThrowsArgumentException</LI></UL></TD></TR></TBODY></TABLE></DIV>
+<DIV class="item">
+<H4>4.2 Abbreviations</H4>
+<P>The usage of abbreviations should be avoided at all times, even in local 
+variables.</P>
+<P>A few abbreviation that are allowed:</P>
+<UL>
+  <LI>Id and id</LI>
+  <LI>Lambda expressions (e.g.: new List&lt;UserAccount&gt;().Find(ua =&gt; 
+  ua.Active);)</LI>
+  <LI>Single class argument (T)</LI>
+  <LI>Counters (for loops)</LI>
+  <LI>Exceptions (if abbreviated always use ex, never e)</LI></UL>
+<P>Abbreviation that is required:</P>
+<UL>
+  <LI>Event arguments (always use e) as method parameters</LI></UL>
+<P>Despite the fact that the usage of abbreviations should be avoided at all 
+times (even for local variables), this section describes the casing of 
+abbreviation when no alternative exists. They follow the same guidelines as any 
+other fully described members, arguments or type names.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI>appName method argument</LI>
+  <LI>WinForms namespace</LI>
+  <LI>transactionalConn local variable</LI>
+  <LI>_IdList field (not containg any ASP.NET control IDs)</LI></UL>
+<P>The exception to this rule is the ID of web control and a reference to the ID 
+of a web control. It is regarded as a two character acronym.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI>ID (as public property for a web control)</LI>
+  <LI>TargetControlID&nbsp; (as public property for a web control referring to 
+  an ID of a web control)</LI></UL></DIV>
+<DIV class="item">
+<H4>4.3 Acronym Casing</H4></DIV>
+<DIV class="item">
+<H4>4.3.1 Acronyms of two characters</H4>
+<P>Capitalize both characters of two-character acronyms, except the first word 
+of a camel-cased identifier.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI>System.Web.Control.UI namespace</LI>
+  <LI>IOException class</LI>
+  <LI>ioException instance</LI>
+  <LI>DialogResult.OK enumeration value</LI></UL></DIV>
+<DIV class="item">
+<H4>4.3.2 Acronyms of more than two characters</H4>
+<P>Capitalize only the first character of acronyms with three or more 
+characters, except the first word of a camel-cased identifier. Do not capitalize 
+any of the characters of any acronyms, whatever their length, at the beginning 
+of a camel-cased identifier.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI><SPAN class="strike">PDFfile</SPAN> -&gt; pdfFile (as local variable)</LI>
+  <LI><SPAN class="strike">ISO31 66_1</SPAN> -&gt; Iso31 66_1 (as property)</LI>
+  <LI><SPAN class="strike">nextXMLFile</SPAN> -&gt; nextXmlFile (as method 
+  argument)</LI>
+  <LI>ASP.NET control, Windows form controls, fields or variable names that 
+  consist of type and a sequence number, except if this has relevance to the 
+  business logic.</LI></UL></DIV>
+<DIV class="item">
+<H4>4.4 Definite "Dont's"</H4>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI><SPAN class="strike">Label3</SPAN></LI>
+  <LI><SPAN class="strike">Content1</SPAN></LI>
+  <LI><SPAN class="strike">button2</SPAN></LI>
+  <LI><SPAN class="strike">int1</SPAN></LI>
+  <LI>Don't use the Hungarian notation. Exception to this rule are names of 
+  variables representing ASP.NET controls. For example, it's fine to name your 
+  control lblProductName, ddlUsers or btnSave.</LI></UL>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI><SPAN class="strike">Don't use &nbsp;shortenings or contractions as parts 
+  of identifier names.</SPAN></LI></UL>
+<UL>
+  <LI><SPAN class="strike">GetWin()</SPAN>-&gt; GetWindow</LI>
+  <LI><SPAN class="strike">SetApp(Application app)</SPAN>-&gt; 
+  SetApplication(Application application)</LI>
+  <LI><SPAN class="strike">Conn</SPAN>-&gt; Connection</LI></UL>
+<P><STRONG>Exception:</STRONG></P>
+<UL>
+  <LI>Don't suffix enumerations with "Enum" or flags with "Flags".</LI>
+  <LI>Do not change the casing of a previously chosen product or technology 
+  name, to re-align the camel humps.</LI></UL>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI>InDesign: <SPAN class="strike">IndesignDocumentReader</SPAN> -&gt; 
+  InDesignDocumentReader</LI>
+  <LI>xNet: <SPAN class="strike">XnetApplicationHelper</SPAN> -&gt; 
+  xNetApplicationHelper</LI>
+  <LI>XmlDocument: <SPAN class="strike">XmldocumentParser</SPAN> -&gt; 
+  XmlDocumentParser</LI>
+  <LI>DocMaker: <SPAN class="strike">DocmakerExtensions</SPAN> -&gt; 
+  DocMakerExtensions</LI>
+  <LI>Do not use articles in variable or member names, even to avoid a name 
+  collision. Use a more descriptive word instead.</LI></UL>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI><SPAN class="strike">theConnection</SPAN> -&gt; connection / 
+  mainConnection / databaseConnection / sqlConnection / …</LI>
+  <LI><SPAN class="strike">aString</SPAN> -&gt; message / value / inputString / 
+  temporayString / …</LI></UL></DIV>
+<DIV class="item">
+<H4>4.5 Namespace naming template</H4>
+<P>Use one of the following template for naming namespaces:</P>
+<PRE class="csharpcode">&lt;Company&gt;
+&lt;Company&gt;.&lt;Technology&gt;
+&lt;Company&gt;.&lt;Technology&gt;.&lt;Feature&gt;[.&lt;Feature&gt;][...]</PRE>
+<P>Do not use organizational hierarchies as the basis for namespace hierarchies. 
+Namespaces should correspond to scenarios regardless of what teams contribute 
+APIs for those scenarios.</P>
+<P>In general, don't use anything that is vulnerable to change.</P>
+<P>Do not use the same name for a namespace and a class. For example, do not 
+provide both a Debug namespace and a Debug class. If this is a problem, a common 
+trick is to apply a present continuous conjugation to the verb used in the 
+class. E.g. Debugging.Debugger, Streaming.Stream.</P></DIV>
+<DIV class="item">
+<H4>4.6 Naming for classes and structures</H4>
+<P>The most specific parts of the name should be as far as possible in front of 
+the name.</P>
+<P>Examples:</P>
+<UL>
+  <LI>OptionPanel: <BR>This name indicates that the object type is a Panel. It 
+  allows you to choose a given option</LI>
+  <LI>PanelOption: <BR>It concerns an option specific for a Panel.</LI>
+  <LI>AccountServiceThread: <BR>This type name concerns a Thread object, 
+  specific for an AccountService. The Service is specific for an Account</LI>
+  <LI>SingleThreadUserSecurityAuthenticator: <BR>This name denotes an 
+  Authenticator class specific for user security. This class is further 
+  specialized as a single threaded implementation.</LI></UL></DIV>
+<DIV class="item">
+<H4>4.7 Awkward plural names or words without singular</H4>
+<P>Some nouns have awkward plural names (e.g.: data, contexts, etc.) and other 
+nouns don't a have singular form (e.g.: pants, glasses, etc.). When these nouns 
+are required in a plural name it is recommended to add one of these suffixes, 
+instead of adding an s:</P>
+<UL>
+  <LI>List</LI>
+  <LI>Collection</LI>
+  <LI>Array</LI>
+  <LI>Group</LI>
+  <LI>Set</LI>
+  <LI>Range</LI></UL></DIV>
+<DIV class="item">
+<H4>4.8 Multiple plural nouns</H4>
+<P>Avoid using multiple plural nouns in one name (e.g.: ColumnsProperties).</P>
+<P>Use only a plural part at the end of the name (except if the English language 
+doesn't allow this, like: filesToDelete)</P></DIV>
+<DIV class="item">
+<H4>4.9 Underscores</H4>
+<P>The usage of underscores should be avoided at all times between name 
+parts.</P>
+<P>Exception:</P>
+<UL>
+  <LI>Unit test methods</LI></UL></DIV>
+<DIV class="item">
+<H4>4.10 Public members</H4>
+<P>When devising new names for public members (like properties, methods, events, 
+etc.) you should look inside the .NET framework first at similar objects and see 
+which names are used there.</P>
+<P>Example: When implementing a custom collection don't use Delete(...), but use 
+Remove(...) instead</P></DIV>
+<DIV class="item">
+<H2 class="grey-title">5. Coding</H2></DIV>
+<DIV class="item">
+<H4>5.1 Folders</H4>
+<P>Synchronize your folder structure with your namespace structure (below the 
+project level). The folder name must equal the part of the namespace it 
+resembles.</P>
+<P><STRONG>Example</STRONG></P>
+<TABLE border="0">
+  <TBODY>
+  <TR>
+    <TH>Folder</TH>
+    <TH>Namespace</TH></TR>
+  <TR>
+    <TD>[Project folder]</TD>
+    <TD>Vega.PageBuilder.Core</TD></TR>
+  <TR>
+    <TD>[Project folder]\Validation</TD>
+    <TD>Vega.PageBuilder.Core.Validation</TD></TR>
+  <TR>
+    <TD>[Project folder]\Xml</TD>
+    <TD>Vega.PageBuilder.Core.Xml</TD></TR>
+  <TR>
+    <TD>[Project folder]\Xml\Schema</TD>
+    <TD>Vega.PageBuilder.Core.Xml.Schema</TD></TR></TBODY></TABLE></DIV>
+<DIV class="item">
+<H4>5.2 Files</H4>
+<P>Use one file per class. This guideline doesn't apply for nested classes 
+(which should be used sparingly). The file name must resemble the class it 
+contains.</P>
+<P><STRONG>Example</STRONG></P>
+<TABLE border="0">
+  <TBODY>
+  <TR>
+    <TH>Type</TH>
+    <TH>File Name</TH></TR>
+  <TR>
+    <TD>CollectionBase</TD>
+    <TD>CollectionBase.cs</TD></TR>
+  <TR>
+    <TD>ValidationManager&lt;TId, TRule&gt;</TD>
+    <TD>ValidationManager.cs</TD></TR>
+  <TR>
+    <TD>LoadOptions</TD>
+    <TD>LoadOptions.cs</TD></TR></TBODY></TABLE></DIV>
+<DIV class="item">
+<H4>5.3 Fields</H4>
+<P>Do not use instance fields that are public or protected. If you avoid 
+exposing fields directly to the developer, classes can be versioned more easily 
+because a field cannot be changed to a property while maintaining binary 
+compatibility. Consider providing get and set property accessors for fields 
+instead of making them public. The presence of executable code in get and set 
+property accessors allows later improvements, such as creation of an object on 
+demand, upon usage of the property, or upon a property change 
+notification.</P></DIV>
+<DIV class="item">
+<H4>5.4 Access modifiers</H4>
+<P>Always add access modifiers, even if they resemble the default access 
+modifiers (private for fields, internal for class, etc).</P></DIV>
+<DIV class="item">
+<H4>5.5 Braces</H4>
+<P>The global standard of braces within Vega IT is Allman style (BSD in Emacs). 
+See also: <A href="http://en.wikipedia.org/wiki/Indent_style#Allman_style_.28bsd_in_Emacs.29" 
+target="_blank">http://en.wikipedia.org/wiki/Indent_style#Allman_style_.28bsd_in_Emacs.29</A></P>
+<P>This style implies that the opening braces are put on a new line, aligned 
+relatively to its construct. The closing brace is aligned to the same column, 
+and the content of the braces are indented at least one step.</P>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode">while(x != 0)
+{
+&nbsp; &nbsp; x--;
+&nbsp; &nbsp; Debug.Out.WriteLine(<SPAN class="str">"x = {0}"</SPAN>, x);
+}</PRE>
+<P>The following statements are allowed on one line as long as they aren't wider 
+than the right margin:</P>
+<UL>
+  <LI>An array initializer:</LI></UL>
+<PRE class="csharpcode"><SPAN class="kwrd">int</SPAN>[] indices = <SPAN class="kwrd">new</SPAN>[] { 0, 1, 2, 3 };</PRE>
+<UL>
+  <LI>A class initializer:</LI></UL>
+<PRE class="csharpcode">CheckBox checkBox = <SPAN class="kwrd">new</SPAN> CheckBox { ID = <SPAN class="str">"MyCheckBox"</SPAN> };
+TranslatedMessage translatedMessage = <SPAN class="kwrd">new</SPAN> TranslatedMessage
+{
+TheMessageToBeTranslated = <SPAN class="str">"This is the message that is far too wide"</SPAN>;
+}</PRE>
+<UL>
+  <LI>A list initializer:</LI></UL>
+<PRE class="csharpcode">List&lt;<SPAN class="kwrd">char</SPAN>&gt; chars = <SPAN class="kwrd">new</SPAN> List&lt;<SPAN class="kwrd">char</SPAN>&gt; { <SPAN class="str">'V'</SPAN>, <SPAN class="str">'E'</SPAN>, <SPAN class="str">'G'</SPAN>, <SPAN class="str">'A'</SPAN> };</PRE>
+<UL>
+  <LI>A Pair initializer:</LI></UL>
+<PRE class="csharpcode">Dictionary&lt;<SPAN class="kwrd">int</SPAN>, <SPAN class="kwrd">string</SPAN>&gt; table =
+	<SPAN class="kwrd">new</SPAN> Dictionary&lt;<SPAN class="kwrd">int</SPAN>, <SPAN class="kwrd">string</SPAN>&gt; { { 1, <SPAN class="str">"First"</SPAN> }, { 2, <SPAN class="str">"Second"</SPAN> } };</PRE>
+<UL>
+  <LI>A simple anonymous delegate:</LI></UL>
+<PRE class="csharpcode"><SPAN class="kwrd">this</SPAN>.ButtonOk.Click += <SPAN class="kwrd">delegate</SPAN> { <SPAN class="kwrd">return</SPAN>; };</PRE>
+<P>Use braces even though only one statement is embedded.</P>
+<P><STRONG>Exceptions:</STRONG></P>
+<UL>
+  <LI>Lambda expressions</LI>
+  <LI>Special treatment for else-if constructs</LI></UL>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode"><SPAN class="kwrd">if</SPAN>(x % 5 == 0)
+{
+&nbsp; &nbsp; y++;
+}
+<SPAN class="kwrd">else</SPAN> <SPAN class="kwrd">if</SPAN>(x % 6 == 0)
+{
+&nbsp; &nbsp; z++;
+}</PRE></DIV>
+<DIV class="item">
+<H4>5.6 Formatting</H4>
+<P>There is a ReSharper shared formatting settings file located on XXX that 
+configures most formatting guidelines described in this document, including the 
+right margin.</P></DIV>
+<DIV class="item">
+<H4>Right margin</H4>
+<P>The right margin is set to 120 characters.</P></DIV>
+<DIV class="item">
+<H4>Tab size</H4>
+<P>The tab size is set to 4.</P>
+<P>To increase ease of merging, configure Visual Studio to keep tabs.</P></DIV>
+<DIV class="item">
+<H4>5.7 Order of members</H4></DIV>
+<DIV class="item">
+<H2 class="grey-title">5.7.1 Class and struct members</H2>
+<P>The following order of class and struct members is suggested:</P>
+<OL>
+  <LI>Constants</LI>
+  <LI>Static read-only fields</LI>
+  <LI>Instance, static fields and private events</LI>
+  <LI>Static constructor (if present)</LI>
+  <LI>Instance constructors (default first if present)</LI>
+  <LI>Static factory methods</LI>
+  <LI>Public events or event properties</LI>
+  <LI>Properties</LI>
+  <LI>Methods</LI>
+  <LI>Inline (nested) classes</LI></OL></DIV>
+<DIV class="item">
+<H4>5.7.2 Enum values</H4>
+<P>The values of an enumeration is recommended in the same order as the numeric 
+value.</P></DIV>
+<DIV class="item">
+<H4>5.8 Named parameters</H4>
+<P>Named parameters should never be used. Even though they allow code to be read 
+more easily (especially when using constants like numeric or Boolean values), 
+they create a new dependency towards the code that is being utilized. Before 
+.NET 4.0 C# a method argument could be renamed freely as long as the method's 
+signature didn't change. With named parameters a rename of a method argument 
+(for instance to make the purpose more clearly) could result in breaking 
+changes.</P>
+<P>This results in a new recommendation as well: <BR>when developing an API, it 
+pays off to come up with a well considered name for any publicly accessible 
+method argument. Even though we strongly discourage the use of named parameter, 
+we don't control what customer do with them.</P></DIV>
+<DIV class="item">
+<H2 class="grey-title">6. Documentation</H2></DIV>
+<DIV class="item">
+<H4>6.1 Regions</H4>
+<P>The usage of regions is neither forbidden, nor encouraged. In case of large 
+files the use of regions is recommended, but not required.</P>
+<P>When applying regions, make sure the region description clearly describes the 
+content and/or the intention of the region.</P></DIV>
+<DIV class="item">
+<H4>6.2 Integrated documentation (XML Documentation)</H4>
+<P>Integrated documentation is a powerful mechanism for creating user friendly 
+code, especially when writing API software. When applied correctly the user will 
+be able to understand your code easier.</P>
+<P>At Vega IT the use of integrated documentation is required for all public 
+members and is highly recommended for internal and protected members.</P>
+<P>All documentation is written in US English.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI><SPAN class="strike">Colour</SPAN>Color</LI>
+  <LI><SPAN class="strike">Catalogue</SPAN>Catalog</LI>
+  <LI><SPAN class="strike">Serialise</SPAN>Serialize</LI></UL>
+<P>Always use full sentences in the summary of the documentation. The usage of a 
+full-stop (.) is required for all documentation elements.</P>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode"><SPAN class="rem">///&lt;summary&gt;</SPAN>
+<SPAN class="rem">///Gets or sets the full name of the &lt;see cref="Person"/&gt;.</SPAN>
+<SPAN class="rem">///&lt;/summary&gt;</SPAN>
+<SPAN class="rem">///&lt;returns&gt;The name of the &lt;see cref="Person"/&gt;.&lt;/returns&gt;</SPAN>
+<SPAN class="rem">///&lt;remarks&gt;The order of the name parts is first name, then last name.&lt;/remarks&gt;</SPAN>
+<SPAN class="rem">///&lt;seealso cref="FirstName" /&gt;</SPAN>
+<SPAN class="rem">///&lt;seealso cref="LastName" /&gt;</SPAN>
+<SPAN class="rem">/// &lt;exception cref="System.InvalidOperationException"&gt;Thrown when the person was not initialized yet.&lt;/exception&gt;</SPAN>
+<SPAN class="rem">/// &lt;exception cref="System.ArgumentNullException"&gt;Thrown when the property is set to &lt;see langword="null"/&gt;.&lt;/exception&gt;</SPAN>
+<SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">string</SPAN> FullName
+{
+&nbsp; &nbsp; <SPAN class="kwrd">get</SPAN>
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">return</SPAN> ...;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <SPAN class="kwrd">set</SPAN>
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; ...
+&nbsp; &nbsp; }
+}</PRE>
+<P><STRONG>Tips</STRONG></P>
+<UL>
+  <LI>When devising descriptions sometimes it's easier to look inside the .NET 
+  framework or at similar objects and see which descriptions are used 
+there.</LI>
+  <LI>Always make references to types, members, events and/or arguments that are 
+  in the description.</LI>
+  <LI>Document which Exceptions will be thrown in which cases.</LI>
+  <LI>Document remarks, if a particular implementation or side-effect cannot be 
+  inferred from the member's name or the documentation's summary.</LI>
+  <LI>Consider adding documentation to private members especially if the meaning 
+  is not always clear.</LI></UL>
+<P>See also: <A href="http://msdn.microsoft.com/en-us/library/5ast78ax(v=vs.71).aspx" 
+target="_blank">http://msdn.microsoft.com/en-us/library/5ast78ax(v=vs.71).aspx</A></P></DIV>
+<DIV class="item">
+<H4>6.3 Comments</H4>
+<P>Writing comments is never a substitute for writing comprehensible code. 
+However, you should add comments within your code wherever it could clarify or 
+improve readability. Sometimes there is considerable time between two moments 
+that you read you own code, so commenting your code doesn't only benefit others 
+but yourself as well. When adding comment, say why you are doing the 
+statement(s) rather than saying what you are doing in the statement(s).</P>
+<P>Comment on a blank line is placed before the related statement(s).</P>
+<P>Don't use multiline comments (/* */).</P></DIV>
+<DIV class="item">
+<H2 class="grey-title">7. Best practices</H2></DIV>
+<DIV class="item">
+<H4>7.1 Events</H4></DIV>
+<DIV class="item">
+<H4>7.1.1 Implementing</H4>
+<P>Implementing an event requires three parts</P>
+<UL>
+  <LI>Use EventArgs directly or create an event arguments class (the name should 
+  always end with EventArgs) which inherits from the EventArgs class or one of 
+  its derived classes. When implementing an event that is signaling a process 
+  that can be aborted/continued (like Saving event), use or derive from 
+  CancelEventArgs and use the Cancel property to abort the process.</LI></UL>
+<P>- or -</P>
+<P>Reuse an existing (.NET) event arguments class compliant with the previous 
+rules.</P>
+<UL>
+  <LI>Implement your event using a public exposed event. Only use a private 
+  event with a public event property if there is additional code required when 
+  adding and/or removing an event handler. Use System.EventHandler (where T is 
+  your newly created event arguments class) for your event.</LI>
+  <LI>Implement an event trigger. This is a protected virtual method called 
+  OnEventName with one argument: the specific event arguments class with the 
+  name e. Inside your method you check if the event is not null. If not, call 
+  the event using a reference to the class itself and the passed event arguments 
+  (e). Avoid implementing any other code inside this method. If other code is 
+  added to the method this will cause unsuspected behavior of your class, when 
+  somebody else inherits the class and overrides this method.</LI></UL>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode"><SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">class</SPAN> PropertyChangedEventArgs : EventArgs
+{
+&nbsp; &nbsp; <SPAN class="kwrd">private</SPAN> <SPAN class="kwrd">readonly</SPAN> <SPAN class="kwrd">string</SPAN> _propertyName;
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> PropertyChangedEventArgs(<SPAN class="kwrd">string</SPAN> propertyName)
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; _propertyName = propertyName;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">string</SPAN> PropertyName
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">get</SPAN> { <SPAN class="kwrd">return</SPAN> _propertyName; }
+&nbsp; &nbsp; }
+}
+<SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">class</SPAN> MyEventClass
+{
+&nbsp; &nbsp; <SPAN class="kwrd">private</SPAN> <SPAN class="kwrd">object</SPAN> _value;
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">event</SPAN> EventHandler&lt;PropertyChangedEventArgs&gt; PropertyChanged;
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">object</SPAN> Value
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">get</SPAN> { <SPAN class="kwrd">return</SPAN> _value; }
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">set</SPAN>
+&nbsp; &nbsp; &nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _value = value;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OnPropertyChanged(<SPAN class="kwrd">new</SPAN> PropertyChangedEventArgs(<SPAN class="str">"Value"</SPAN>));
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <SPAN class="kwrd">protected</SPAN> <SPAN class="kwrd">virtual</SPAN> <SPAN class="kwrd">void</SPAN> OnPropertyChanged(PropertyChangedEventArgs e)
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">if</SPAN> (PropertyChanged != <SPAN class="kwrd">null</SPAN>)
+&nbsp; &nbsp; &nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PropertyChanged(<SPAN class="kwrd">this</SPAN>, e);
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+}</PRE></DIV>
+<DIV class="item">
+<H4>7.1.2 Calling events</H4>
+<P>Always use the (inherited) event trigger for calling events. Pass 
+EventArgs.Empty if nothing needs to be passed to the event.</P></DIV>
+<DIV class="item">
+<H4>7.1.3 Handling events</H4>
+<P>Where possible, override the event trigger method instead of registering to 
+the event delegate.</P>
+<P>This will improve performance and you will be able to disable the 
+implementation of the base class (by not calling the base.OnEventName 
+method).</P>
+<P>Try to avoid calling a method that is an event handler (e.g.: ButtonOKClick). 
+Instead refactor the implementation of that event handler to a new method and 
+call that method.</P></DIV>
+<DIV class="item">
+<H4>7.2 Using application configuration (AppSettings) inside components</H4>
+<P>Components are as building blocks of an application. They serve a specific 
+purpose in a specific context. The state (inner fields and properties) of the 
+component defines the behaviour of the component and is set based on the context 
+in which it is used.</P>
+<P>When following the principle of reusability, we indirectly try to avoid 
+pinning components to a certain context (like a specific application or 
+platform). One of the main methods to do this is to avoid accessing the 
+configuration directly from within the component. Instead, the required settings 
+are passed to the component or method as arguments. Normally, only components 
+managing the configuration (AppSettings) use the application configuration 
+environment directly.</P>
+<P>Following this guideline will also improve principle of single point of 
+implementation.</P></DIV>
+<DIV class="item">
+<H4>7.3 Configuration sections</H4>
+<P>Custom configuration sections should be developed when the need to store 
+configurable settings emerges, whenever these settings are mostly environmental 
+or diagnostic in nature (e.g. logging settings, server settings, Windows or WCF 
+service configuration, …).</P></DIV>
+<DIV class="item">
+<H4>7.3.1 Implementation</H4>
+<P>Custom configuration section groups and sections must always derive from the 
+System.Configuration.ConfigurationSectionGroup or the 
+System.Configuration.ConfigurationSection class.</P>
+<P>Do not implement the legacy .NET 1.x 
+System.Configuration.IConfigurationSectionHandler interface.</P>
+<P>The section group or section name should represent the root namespace of the 
+assembly, suffixed with 'SectionGroup' or 'Section'.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI>VegaCoreSectionGroup</LI>
+  <LI>VegaCoreSection</LI></UL>
+<P>The root namespace of the assembly, in camel casing, is also the name for the 
+section element in the XML configuration.</P>
+<P><STRONG>Example</STRONG></P>
+<UL>
+  <LI>vega.core</LI></UL>
+<P>Configurable properties must be implemented using the indexer inherited from 
+the System.Configuration.ConfigurationSectionGroup, 
+System.Configuration.ConfigurationSection or 
+System.Configuration.ConfigurationElement class, and decorated with the 
+System.Configuration.ConfigurationPropertyAttribute attribute, preferably 
+indicating a default value for the property.</P>
+<P>When validation is required, you can optionally add validation attributes to 
+the property. In case the property's return type requires a type converter for 
+serializing and deserializing its value, you may also decorate the property with 
+a TypeConverterAttribute attribute (for example, TimeSpan or DateTime typed 
+properties typically need this).</P>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode">[ConfigurationProperty(<SPAN class="str">"port"</SPAN>, DefaultValue = (<SPAN class="kwrd">int</SPAN>)0, IsRequired = <SPAN class="kwrd">false</SPAN>)]
+[IntegerValidator(MinValue = 0, MaxValue = 8080, ExcludeRange = <SPAN class="kwrd">false</SPAN>)]
+<SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">int</SPAN> Port
+{
+&nbsp; &nbsp; <SPAN class="kwrd">get</SPAN>
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">return</SPAN> (<SPAN class="kwrd">int</SPAN>)<SPAN class="kwrd">this</SPAN>[<SPAN class="str">"port"</SPAN>];
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <SPAN class="kwrd">set</SPAN>
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">this</SPAN>[<SPAN class="str">"port"</SPAN>] = value;
+&nbsp; &nbsp; }
+}</PRE>
+<P>Collections of such elements must be implemented by deriving from the 
+System.Configuration.ConfigurationElementCollection class, and properties in the 
+containing section group, section or element must be declared.</P>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode">[ConfigurationProperty(<SPAN class="str">"registrations"</SPAN>, IsDefaultCollection = <SPAN class="kwrd">false</SPAN>)]
+<SPAN class="kwrd">public</SPAN> RegistrationElementCollection Registrations
+{
+&nbsp; &nbsp; <SPAN class="kwrd">get</SPAN>
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">object</SPAN> value = <SPAN class="kwrd">this</SPAN>[<SPAN class="str">"registrations"</SPAN>];
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">if</SPAN> (value == <SPAN class="kwrd">null</SPAN>)
+&nbsp; &nbsp; &nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; value = <SPAN class="kwrd">new</SPAN> RegistrationElementCollection();
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">this</SPAN>[<SPAN class="str">"registrations"</SPAN>] = value;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">return</SPAN> (RegistrationElementCollection)value;
+&nbsp; &nbsp; }
+}</PRE>
+<P>Finally, the configuration section groups, sections and all its related 
+classes (i.e. System.Configuration.ConfigurationElement and 
+System.Configuration.ConfigurationElementCollection implementations) should 
+reside in a 'Configuration' namespace under the root namespace of the 
+assembly.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI>Vega.Pims.Core.Configuration</LI>
+  <LI>Vega.DocMaker.Core.Configuration</LI></UL></DIV>
+<DIV class="item">
+<H4>7.3.2 Further reading</H4>
+<P>More information about this subject can be found on the MSDN web site at <A 
+href="http://msdn.microsoft.com/en-us/library/ms178688.aspx." 
+target="_blank">http://msdn.microsoft.com/en-us/library/ms178688.aspx.</A></P></DIV>
+<DIV class="item">
+<H4>7.4 Usage of conditions and conditional operators</H4>
+<P>Only use ternary operator (?:) and a coalescing operator (??) if the meaning 
+is immediately clear. Otherwise use conditional (if) statement.</P>
+<P>When using a conditional binary operator or a coalescing operator, consider 
+to enclose them in brackets whenever it clarifies the meaning.</P>
+<P><STRONG>Examples</STRONG></P>
+<PRE class="csharpcode"><SPAN class="kwrd">this</SPAN>.CheckBoxOK.Checked = (<SPAN class="kwrd">this</SPAN>.Result == DialogResult.OK);
+person.Name = (firstName ?? <SPAN class="str">"?"</SPAN>);
+<SPAN class="kwrd">return</SPAN> ((message.Length == 0) ? <SPAN class="kwrd">string</SPAN>.Empty : message.Substring(0, 1));</PRE></DIV>
+<DIV class="item">
+<H4>7.5 Explicit casting vs. safe casting</H4>
+<P>Always use safety casts if the type of the instance is uncertain. In other 
+cases, use explicit casting.</P>
+<P><STRONG>Example safe cast</STRONG></P>
+<PRE class="csharpcode"><SPAN class="kwrd">string</SPAN> text = HttpContext.Current.Application[<SPAN class="str">"VegaStudio.Text"</SPAN>] <SPAN class="kwrd">as</SPAN> <SPAN class="kwrd">string</SPAN>;
+<SPAN class="kwrd">if</SPAN>(<SPAN class="kwrd">string</SPAN> != <SPAN class="kwrd">null</SPAN>)
+{
+&nbsp; &nbsp; <SPAN class="rem">//...</SPAN>
+}</PRE>
+<P><STRONG>Example explicit cast</STRONG></P>
+<PRE class="csharpcode"><SPAN class="kwrd">if</SPAN>(stream.DataType() == <SPAN class="kwrd">typeof</SPAN>(Int32))
+{
+&nbsp; &nbsp; <SPAN class="kwrd">int</SPAN> value = (<SPAN class="kwrd">int</SPAN>)stream.ReadValue;
+&nbsp; &nbsp; <SPAN class="rem">// ...</SPAN>
+}</PRE></DIV>
+<DIV class="item">
+<H4>7.6 Native type vs. structure</H4>
+<P>The native type (e.g. int) notation is preferred over the structure type 
+(Int32) notation.</P></DIV>
+<DIV class="item">
+<H4>7.7 Usage of var keyword</H4>
+<P>The usage of the var keyword (opposed to explicit type declaration) is highly 
+discouraged.</P>
+<P><STRONG>Exceptions:</STRONG></P>
+<UL>
+  <LI>LINQ statements</LI>
+  <LI>Fluent interfaces</LI></UL></DIV>
+<DIV class="item">
+<H4>7.8 Redundant array type</H4>
+<P>The following form</P>
+<PRE class="csharpcode"><SPAN class="kwrd">string</SPAN>[] values = <SPAN class="kwrd">new</SPAN> <SPAN class="kwrd">string</SPAN>[] { <SPAN class="str">"Hello"</SPAN>, <SPAN class="str">"world"</SPAN> };</PRE>
+<P>is allowed and is even encouraged if the type of the array is not clear as 
+shown in this example:</P>
+<PRE class="csharpcode"><SPAN class="kwrd">string</SPAN>[] value;
+<SPAN class="rem">// ...</SPAN>
+values = <SPAN class="kwrd">new</SPAN> <SPAN class="kwrd">string</SPAN>[] { identifier, control.ID, value, <SPAN class="str">"Extra"</SPAN> };</PRE>
+<P>If the type is clear, this form is recommended:</P>
+<PRE class="csharpcode"><SPAN class="kwrd">string</SPAN>[] ids = <SPAN class="kwrd">new</SPAN>[] { <SPAN class="str">"Hello"</SPAN>, <SPAN class="str">"world"</SPAN> };</PRE></DIV>
+<DIV class="item">
+<H4>7.9 Explicit this keyword</H4>
+<P>Explicit use of the this keyword is not allowed.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI><SPAN class="strike">this.ToString("000000"); </SPAN>-&gt; 
+  ToString("000000");</LI>
+  <LI><SPAN class="strike">this.Name = "New name"; </SPAN>-&gt; Name = "New 
+  Name";</LI>
+  <LI><SPAN class="strike">this._Index = 1; </SPAN>-&gt; _Index = 1;</LI>
+  <LI><SPAN class="strike">this.MyMethod(this.Id, this.GetParent(), 
+  true);</SPAN>-&gt; MyMethod(Id, GetParent(), true);</LI>
+  <LI><SPAN class="strike">this.CreateInstance(this, new Item());</SPAN>-&gt; 
+  CreateInstance(this, new Item());</LI></UL></DIV>
+<DIV class="item">
+<H4>7.10 Exceptions</H4>
+<P>When implementing an exception class following guidelines are in effect:</P>
+<UL>
+  <LI>When implementing a base exception (a non-specific exception class that is 
+  intended to inherit from) all constructors of the Exception class must be 
+  implemented in the new exception class.</LI></UL>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode"><SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">class</SPAN> WebException : Exception {
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> WebException() &nbsp; : <SPAN class="kwrd">base</SPAN>()
+{
+}
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> WebException(<SPAN class="kwrd">string</SPAN> message) : <SPAN class="kwrd">base</SPAN>(message)
+{
+}
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> WebException(<SPAN class="kwrd">string</SPAN> message, Exception innerException)
+&nbsp; &nbsp; &nbsp; &nbsp; : <SPAN class="kwrd">base</SPAN>(message, innerException)
+{
+}
+&nbsp; &nbsp; <SPAN class="kwrd">protected</SPAN> WebException(
+SerializationInfo info,
+&nbsp; &nbsp; &nbsp; &nbsp; StreamingContext context)
+&nbsp; &nbsp; &nbsp; &nbsp; : <SPAN class="kwrd">base</SPAN>(info, context)
+{
+}
+}</PRE>
+<UL>
+  <LI>Exceptions in .NET are a special kind of serializable objects. There is a 
+  native mechanism implemented in the Exception class and available to any class 
+  that inherits from that base class. Normally you will not need this (the 
+  serialization of the contents of the exception is done for you), except if you 
+  implement additional properties in your exception class.</LI></UL>
+<P><STRONG>Example</STRONG></P>
+<PRE class="csharpcode"><SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">class</SPAN> FileLockException : System.IO.IOException
+{
+&nbsp; &nbsp; Private <SPAN class="kwrd">const</SPAN> <SPAN class="kwrd">string</SPAN> FileNameField = <SPAN class="str">"Vega.IO.FileLockException._FileName"</SPAN>;
+&nbsp; &nbsp; <SPAN class="kwrd">private</SPAN> <SPAN class="kwrd">readonly</SPAN> <SPAN class="kwrd">string</SPAN> _FileName = <SPAN class="kwrd">null</SPAN>;
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> FileLockException(<SPAN class="kwrd">string</SPAN> fileName)
+&nbsp; &nbsp; &nbsp; &nbsp; : <SPAN class="kwrd">base</SPAN>(<SPAN class="kwrd">string</SPAN>.Format(<SPAN class="str">"File '{0}' is locked."</SPAN>, filename))
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">this</SPAN>._FileName = fileName;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <SPAN class="kwrd">protected</SPAN> FileLockException (
+&nbsp; &nbsp; &nbsp; &nbsp; SerializationInfo info,
+&nbsp; &nbsp; &nbsp; &nbsp; StreamingContext context)
+&nbsp; &nbsp; &nbsp; &nbsp; : <SPAN class="kwrd">base</SPAN>(info, context)
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">this</SPAN>._FileName = (<SPAN class="kwrd">string</SPAN>)info.GetValue(FileNameField, <SPAN class="kwrd">typeof</SPAN>(<SPAN class="kwrd">string</SPAN>));
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">override</SPAN> <SPAN class="kwrd">void</SPAN> GetObjectData(SerializationInfo info,
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StreamingContext context)
+&nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; info.AddValue(FileNameField, <SPAN class="kwrd">this</SPAN>._FileName);
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <SPAN class="kwrd">public</SPAN> <SPAN class="kwrd">string</SPAN> FileName
+{
+&nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">get</SPAN> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <SPAN class="kwrd">return</SPAN> <SPAN class="kwrd">this</SPAN>._FileName;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+}</PRE></DIV>
+<DIV class="item">
+<H4>7.11 Empty members</H4>
+<P>Use Empty members as much as possible, when they are available.</P>
+<P><STRONG>Examples:</STRONG></P>
+<PRE class="csharpcode">record.Fields.GetField&lt;TextField&gt;(<SPAN class="str">"MyField"</SPAN>).SetValue(<SPAN class="kwrd">string</SPAN>.Empty);
+<SPAN class="kwrd">if</SPAN>(Count == 0)
+{
+&nbsp; &nbsp; <SPAN class="kwrd">return</SPAN> Enumerable.Empty&lt;Language&gt;();
+}
+Guid newId = Guid.Empty;
+Point point = Point.Empty;</PRE></DIV>
+<DIV class="item">
+<H4>7.12 Asynchronous Methods</H4>
+<P>Asynchronous methods help in scaling applications as it allows non-blocking 
+calls. They do however, get complicated quite fast. C# 5's new async keyword 
+will help us in Visual Studio 2012, but there seems to be a concensus about 
+conventions:</P>
+<P><STRONG>An asynchronous method always returns a Task, or a Task.</STRONG></P>
+<P>If the synchronous version of the method returns void, the asynchronous 
+version of the method must return Task. If the synchronous version of the method 
+returns T, the asynchronous version of the method must return Task.</P>
+<P><STRONG>An asynchronous method always adds the suffix "Async".</STRONG></P>
+<P>This follows the same pattern as used in the BCL, in Silverlight, and in 
+future Microsoft APIs. In general, the synchronous method and the asynchronous 
+method should have the same name and the same parameters, with the asynchronous 
+version suffixed "Async" and returning either a Task or a Task.</P>
+<P><STRONG>Always provide a synchronous method along the asynchronous 
+method.</STRONG></P>
+<P>Not everyone can handle Task objects, just yet. Not every method should be 
+asynchronous (only when it is believed that the method may be at some point be 
+waiting for an external resource) but not all clients want to handle things 
+asynchronously. The easiest way to make synchronous versions is by calling the 
+asynchronous version and calling Wait() on the returning Task or Task.</P></DIV>
+<DIV class="item">
+<H2 class="grey-title">8. Web Specific Guidelines</H2></DIV>
+<DIV class="item">
+<H4>8.1 Naming conventions</H4></DIV>
+<DIV class="item">
+<H4>8.1.1 ASP.NET</H4>
+<TABLE border="0">
+  <TBODY>
+  <TR>
+    <TH>Type</TH>
+    <TH>Casing</TH>
+    <TH>Remarks</TH>
+    <TH>Guidelines</TH></TR>
+  <TR>
+    <TD>Page Controls</TD>
+    <TD>camel</TD>
+    <TD>&nbsp;</TD>
+    <TD>
+      <UL>
+        <LI>Rules of readability don't apply for dynamic/repeated controls: use 
+        a unique name as small as possible in order to keep render page size as 
+        small as possible.</LI>
+        <LI>Control names appear as fields in the generated page class, and 
+        should therefore be camel cased.</LI></UL></TD></TR></TBODY></TABLE></DIV>
+<DIV class="item">
+<H4>8.1.2 Abbreviations</H4>
+<P>All guidelines in section 4.2 are in effect, except for the ID of web control 
+and a reference to the ID of a web control. It is regarded as a two character 
+acronym. All other IDs are not.</P>
+<P><STRONG>Examples</STRONG></P>
+<UL>
+  <LI>ID (as public property for a web control)</LI>
+  <LI>TargetControlID &nbsp;(as public property for a web control referring to 
+  an ID of a web control)</LI></UL></DIV>
+<DIV class="item">
+<H4>8.2 Coding</H4></DIV>
+<DIV class="item">
+<H4>8.2.1 ASP.NET events</H4>
+<P>Set the implemented methods (the most common event triggers) in the order of 
+the page life cycle. This will create a familiarity for each developer.</P>
+<P>Example (overridden event triggers)</P>
+<PRE class="csharpcode"><SPAN class="kwrd">protected</SPAN> <SPAN class="kwrd">override</SPAN> <SPAN class="kwrd">void</SPAN> OnInit(EventArgs e)
+{
+&nbsp; &nbsp; <SPAN class="rem">//...</SPAN>
+}
+<SPAN class="kwrd">protected</SPAN> <SPAN class="kwrd">override</SPAN> <SPAN class="kwrd">void</SPAN> OnLoad(EventArgs e)
+{
+&nbsp; &nbsp; <SPAN class="rem">//...</SPAN>
+}
+<SPAN class="kwrd">protected</SPAN> <SPAN class="kwrd">override</SPAN> <SPAN class="kwrd">void</SPAN> OnPreRender(EventArgs e)
+{
+&nbsp; &nbsp; <SPAN class="rem">//...</SPAN>
+}
+<SPAN class="kwrd">protected</SPAN> <SPAN class="kwrd">override</SPAN> <SPAN class="kwrd">void</SPAN> Render(HtmlTextWriter writer)
+{
+&nbsp; &nbsp; <SPAN class="rem">//...</SPAN>
+}</PRE>
+<P>Example (auto wire-up event handlers)</P>
+<PRE class="csharpcode"><SPAN class="kwrd">private</SPAN> <SPAN class="kwrd">void</SPAN> Page_Init(<SPAN class="kwrd">object</SPAN> sender, EventArgs e)
+{
+&nbsp; &nbsp; <SPAN class="rem">//...</SPAN>
+}
+<SPAN class="kwrd">private</SPAN> <SPAN class="kwrd">void</SPAN> Page_PreRender(<SPAN class="kwrd">object</SPAN> sender, EventArgs e)
+{
+&nbsp; &nbsp; <SPAN class="rem">//...</SPAN>
+}</PRE></DIV></DIV><SPAN 
+class="back-to-top">Go to top</SPAN> </ARTICLE></DIV></DIV></DIV></DIV><FOOTER 
+class="footer">
+<DIV class="row">
+<DIV class="col-md-12">
+<P>© 2018 VEGA IT SOURCING • ALL RIGHTS RESERVED</P></DIV></DIV></FOOTER><!--[if lt IE 7]>
+		<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+	<![endif]-->
+	 <!-- SCRIPTS -->	 
+<SCRIPT src="Knowledge%20base_files/jquery.min.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT type="text/javascript">    window.jQuery || document.write("<script src='/scripts/main/jquery-1.11.2.min.js'>\x3C/script>")</SCRIPT>
+	 
+<SCRIPT src="Knowledge%20base_files/jquery-migrate-1.2.1.min.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT src="Knowledge%20base_files/default.js" type="text/javascript"></SCRIPT>
+	 
+<SCRIPT src="Knowledge%20base_files/search.js" type="text/javascript"></SCRIPT>
+ </BODY></HTML>

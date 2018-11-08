@@ -1,0 +1,56 @@
+/*----------  layout
+------------------------------------------------------------------------------*/
+
+body {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	background: $grey-lighter;
+	color: $text;
+	height: 100%;
+}
+.container {
+	height: auto !important;
+	min-height: 100%;
+}
+.wrapper {
+	max-width: 850px;
+	margin: 0 auto;
+	overflow: hidden;
+	&.centered {
+		max-width: 100% !important;
+		overflow: hidden;
+	}
+	@include responsive(smartphone) {
+		width: 95%;
+		position: relative;
+		&.centered {
+			width: 100%;
+		}
+	} 
+}
+h1 {
+	font-size: 32px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'TitilliumText22LRegular';
+	color: #d2d2d2;
+	@include single-text-shadow(rgba(187, 187, 187, 0.5) 1px, 1px, 0);
+	margin-bottom: 15px;
+}
+h2 {
+	font-size: 22px;
+	font-family: 'TitilliumText22LRegular';
+	color: $grey-dark;
+	//@include single-text-shadow(rgba(187, 187, 187, 0.5) 1px, 1px, 0);
+	margin-bottom: 15px;
+	border-bottom: 1px dotted $grey-dark;
+}
+.link {
+	color: $orange !important;
+	&:hover {text-decoration: underline; }
+}
+
+.btn {@include btn;}
+.btns-inner {
+	text-align: center;
+}

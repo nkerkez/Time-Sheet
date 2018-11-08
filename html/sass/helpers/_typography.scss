@@ -1,0 +1,5 @@
+/*----------  typography
+------------------------------------------------------------------------------*/
+
+@include font-face('TitilliumText22LRegular', font-files("titilliumtext22l003-webfont.woff", "titilliumtext22l003-webfont.ttf", "titilliumtext22l003-webfont.svg"), "titilliumtext22l003-webfont.eot", normal, normal);
+@include font-face('titilliumtext22l_ththin', font-files("titilliumtext22l001-webfont.woff", "titilliumtext22l001-webfont.ttf", "titilliumtext22l001-webfont.svg"), "titilliumtext22l001-webfont.eot", normal, normal);

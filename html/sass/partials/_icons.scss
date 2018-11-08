@@ -1,0 +1,42 @@
+/*----------  icons
+------------------------------------------------------------------------------*/
+
+.ico {
+	display: inline-block;
+	&.date {
+		@include sprite('date'); 
+	}
+	&.print {
+		@include sprite('print'); 
+	}
+	&.pdf {
+		@include sprite('pdf'); 
+	}
+	&.excel {
+		@include sprite('excel'); 
+	}
+	&.timesheet {
+		@include sprite('timesheet');
+		margin-right: 7px;
+	}
+	&.clients {
+		@include sprite('clients');
+		margin-right: 7px;
+	}
+	&.projects {
+		@include sprite('projects');
+		margin-right: 7px;
+	}
+	&.categories {
+		@include sprite('categories');
+		margin-right: 7px;
+	}
+	&.team-member {
+		@include sprite('team-member');
+		margin-right: 7px;
+	}
+	&.report {
+		@include sprite('reports');
+		margin-right: 7px;
+	}
+}
